@@ -15,13 +15,13 @@ class Subranddit(db.Model):
   subscriptions = db.relationship("Subscription", back_populates="subranddit", cascade="all, delete-orphan")
   posts = db.relationship("Post", back_populates="subranddit", cascade="all, delete-orphan")
 
- def to_dict(self):
-      return {
-          "id": self.id,
-          "name": self.name,
-          "owner_id": self.owner_id,
-          "description": self.description,
-          "icon_url": self.icon_url,
-          "banner_img": self.banner_img,
-          "subscriptions": [subscription.to_dict() for subscription in self.subscriptions],
-      }
+  def to_dict(self):
+   return {
+      "id": self.id,
+      "title": self.title,
+      "owner_id": self.owner_id,
+      "description": self.description,
+      "icon_url": self.icon_url,
+      "banner_img": self.banner_img,
+      "subscriptions": [subscription.to_dict() for subscription in self.subscriptions],
+    }
