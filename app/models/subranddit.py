@@ -23,5 +23,5 @@ class Subranddit(db.Model):
       "description": self.description,
       "icon_url": self.icon_url,
       "banner_img": self.banner_img,
-      "subscriptions": [subscription.to_dict() for subscription in self.subscriptions],
+      # "subscriptions": [subscription.to_dict() for subscription in self.subscriptions],
     }

@@ -3,7 +3,7 @@ from flask_login import current_user, login_required
 
 from ..models.db import db
 from ..models.post import Post
-from ..models.subranddit import Subreddit
+from ..models.subranddit import Subranddit
 from ..models.subscription import Subscription
 from ..forms.subr_form import SubrandditForm
 

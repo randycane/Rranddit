@@ -2,9 +2,9 @@ from flask import Blueprint, jsonify, request
 from flask_login import current_user, login_required
 
 from ..models.db import db
-from ..models.posts import Post
-from ..models.comments import Comment
-from ..models.users import User
+from ..models.post import Post
+from ..models.comment import Comment
+from ..models.user import User
 from ..forms.post_form import PostForm
 from ..forms.comment_form import CommentForm
 
