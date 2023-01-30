@@ -10,4 +10,4 @@ class PostForm(FlaskForm):
   img_url = StringField("img_url")
   link_url = StringField("link_url", filters = [lambda x: x or None])
   post_text = TextAreaField("post_text", validators=[Length(max=2000, message="Text length must be less than 2000 characters!")], filters = [lambda x: x or None])
-  subranddit_id =IntegerField("subranddit_id")
+  subranddit_id = IntegerField("subranddit_id")

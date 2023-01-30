@@ -1,13 +1,19 @@
 from flask import Blueprint, jsonify, request
 from flask_login import current_user, login_required
 
+from ..models.db import db
+from ..models.posts import Post
+from ..models.comments import Comment
+from ..models.users import User
+from ..forms.post_form import PostForm
+from ..forms.comment_form import CommentForm
+
 post_routes = Blueprint('post', __name__)
 
 # Get All posts
 @post_routes.route("/all")
 def get_all_posts():
   all_posts = Post.query.order_by(Post.created_at.desc()).all()
-  print("*******")
   print(all_posts)
 
   all_posts_json = [post.to_dict() for post in all_posts]
@@ -17,9 +23,9 @@ def get_all_posts():
 @post_routes.route("/home")
 def get_all_posts_for_user():
   subscriptions = current_user.subscription
-  user_subreddits = [subscription.subreddit for subscription in subscriptions]
+  user_subranddits = [subscription.subranddit for subscription in subscriptions]
   all_posts = Post.query.order_by(Post.created_at.desc()).all()
-  all_posts = [post for post in all_posts if post.subreddit in user_subreddits]
+  all_posts = [post for post in all_posts if post.subranddit in user_subranddits]
 
 
   all_posts_json = [post.to_dict() for post in all_posts]
@@ -42,31 +48,14 @@ def create_post():
   form = PostForm()
   form['csrf_token'].data = request.cookies['csrf_token']
   if form.validate_on_submit():
-    url = None
-    if form.data["post_type_id"] == 2:
-      if "image" not in request.files:
-        return {"errors": ["image required"]}, 400
-
-      image = request.files["image"]
-
-      if not allowed_file(image.filename):
-          return {"errors": ["file type not permitted"]}, 400
-
-      image.filename = get_unique_filename(image.filename)
-
-      upload = upload_file_to_s3(image)
-      if "url" not in upload:
-          return upload, 400
-      url = upload["url"]
 
     new_post = Post(
-      title = form.data["title"],
+      post_title = form.data["post_title"],
       img_url = url,
       link_url = form.data["link_url"],
-      text = form.data["text"],
+      post_text = form.data["post_text"],
       user_id = current_user.id,
-      subreddit_id  = form.data["subreddit_id"],
-      post_type_id = form.data["post_type_id"]
+      subranddit_id  = form.data["subranddit_id"],
     )
     db.session.add(new_post)
     db.session.commit()
@@ -91,10 +80,10 @@ def edit_post(post_id):
     return {"message": "You must be the owner of this post to edit", "statusCode": 403}
 
   if form.validate_on_submit():
-    edited_post.title = form.data['title']
+    edited_post.title = form.data['post_title']
     edited_post.img_url = form.data['img_url']
     edited_post.link_url = form.data['link_url']
-    edited_post.text = form.data['text']
+    edited_post.text = form.data['post_text']
 
     db.session.commit()
 

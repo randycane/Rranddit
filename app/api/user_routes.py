@@ -2,6 +2,11 @@ from flask import Blueprint, jsonify
 from flask_login import login_required
 from app.models import User
 
+from ..models.db import db
+from ..models.post import Post
+from ..models.subranddit import Subranddit
+from ..models.subscription import Subscription
+
 user_routes = Blueprint('users', __name__)
 
 # Get all users:

@@ -1,6 +1,8 @@
-
 from flask import Blueprint, jsonify, request
 from flask_login import current_user, login_required
+from ..models.db import db
+from ..models.comment import Comment
+from ..forms.comment_form import CommentForm
 
 comment_routes = Blueprint('comment', __name__)
 
@@ -16,7 +18,7 @@ def edit_comment(commentId):
     return {"message": "You don't have authorization to edit this comment", "statusCode": 403}
 
   if form.validate_on_submit():
-    edited_comment.text = form.data['text']
+    edited_comment.text = form.data['comment_text']
 
     db.session.commit()
     return edited_comment.to_dict()
