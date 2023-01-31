@@ -9,6 +9,8 @@ import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
 import CreatingPostComponent from './components/CreatePosts/CreatePosts';
+import HomeComponent from './components/HomePage/Home';
+import CreatingSubrandditComponent from './components/CreateSubrand';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -30,7 +32,7 @@ function App() {
       <NavBar />
       <Switch>
         <ProtectedRoute path='/' exact={true} >
-          <h1>My Home Page</h1>
+          <HomeComponent/>
         </ProtectedRoute>
         <Route path='/login' exact={true}>
           <LoginForm />
@@ -46,6 +48,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/create-post" exact={true}>
           <CreatingPostComponent />
+        </ProtectedRoute>
+        <ProtectedRoute path="/create-subranddit" exact={true}>
+          <CreatingSubrandditComponent />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>
