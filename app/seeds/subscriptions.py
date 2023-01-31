@@ -2,19 +2,19 @@ from app.models import db, Subscription
 
 def seed_subscriptions():
   subscription1 = Subscription(
-    subreddit_id = 1,
+    subranddit_id = 1,
     user_id = 2,
   )
   subscription2 = Subscription(
-    subreddit_id = 2,
+    subranddit_id = 2,
     user_id = 3,
   )
   subscription3 = Subscription(
-    subreddit_id = 3,
+    subranddit_id = 3,
     user_id = 3,
   )
   subscription4 = Subscription(
-    subreddit_id = 4,
+    subranddit_id = 4,
     user_id = 1,
   )
   subscription5 = Subscription(
