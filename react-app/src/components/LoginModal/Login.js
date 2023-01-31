@@ -8,7 +8,7 @@ const LoginModalComponent = ({ onClose }) => {
     const [errors, setErrors] = useState([]);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const user = useSelector((state) => state.session.user);
+    const user = useSelector((state) => state?.session?.user);
     const dispatch = useDispatch();
 
     const onLogin = async (e, isDemoUser = false) => {
@@ -16,8 +16,6 @@ const LoginModalComponent = ({ onClose }) => {
       const data = await dispatch(login(email, password));
       if (data) {
         setErrors(data);
-      } else {
-        onClose();
       }
     };
 
@@ -56,7 +54,7 @@ const LoginModalComponent = ({ onClose }) => {
               ))}
             </div>
             <div className="loginEmailDiv field">
-              {/* <label>Email</label> */}
+
               <input
                 className="loginEmailInput"
                 name="email"
@@ -67,7 +65,7 @@ const LoginModalComponent = ({ onClose }) => {
               />
             </div>
             <div className="loginPasswordDiv field">
-              {/* <label htmlFor="password">Password</label> */}
+
               <input
                 className="loginPasswordInput"
                 name="password"

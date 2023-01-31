@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import LoginForm from './components/auth/LoginForm';
 import SignUpForm from './components/auth/SignUpForm';
-import NavBar from './components/NavBar';
+//import NavBar from './components/NavBar/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
@@ -11,6 +11,8 @@ import { authenticate } from './store/session';
 import CreatingPostComponent from './components/CreatePosts/CreatePosts';
 import HomeComponent from './components/HomePage/Home';
 import CreatingSubrandditComponent from './components/CreateSubrand';
+import NavBarComponent from './components/NavBar/NavBar';
+import LoginModalComponent from './components/LoginModal/Login';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -29,13 +31,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBarComponent isLoaded={loaded} />
       <Switch>
         <ProtectedRoute path='/' exact={true} >
           <HomeComponent/>
         </ProtectedRoute>
         <Route path='/login' exact={true}>
-          <LoginForm />
+          <LoginModalComponent isOpen={true} modalToggle={() => {}}/>
         </Route>
         <Route path='/sign-up' exact={true}>
           <SignUpForm />
