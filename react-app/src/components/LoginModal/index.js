@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal } from "../../context/Modal";
-import LoginModalComponent from "./LoginForm";
+import LoginModalComponent from ".";
 
 function LoginFormModal({ isOpen, modalToggle }) {
   return (

@@ -32,7 +32,6 @@ const LoginModalComponent = ({ onClose }) => {
     }
 
     const signUpPage = (subrandditId) => {
-      onClose();
       let path = `/sign-up`;
       history.push(path);
     };
