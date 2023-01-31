@@ -9,7 +9,6 @@ class Post(db.Model):
   post_title = db.Column(db.String(200), nullable=False)
   img_url = db.Column(db.String)
   post_text = db.Column(db.String)
-  link_url = db.Column(db.String)
 
   #relationships
   user = db.relationship("User", back_populates="posts")

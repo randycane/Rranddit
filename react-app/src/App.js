@@ -8,6 +8,7 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
+import CreatingPostComponent from './components/CreatePosts/CreatePosts';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -28,6 +29,9 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
+        <ProtectedRoute path='/' exact={true} >
+          <h1>My Home Page</h1>
+        </ProtectedRoute>
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
@@ -40,8 +44,8 @@ function App() {
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
         </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
-          <h1>My Home Page</h1>
+        <ProtectedRoute path="/create-post" exact={true}>
+          <CreatingPostComponent />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

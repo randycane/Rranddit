@@ -98,14 +98,14 @@ const downvotePostAction = (payload) => {
 
 //Creating a post:
 export const WriteAPostThunk = (data) => async (dispatch) => {
-  const { post_title, post_text, image_url, subrandditId } = data;
+  const { post_title, post_text, img_url, subranddit_id } = data;
   const formData = new FormData();
   formData.append("post_title", post_title);
   formData.append("post_text", post_text);
-  formData.append("image_url", image_url);
-  formData.append("subrandditId", subrandditId);
+  formData.append("img_url", img_url);
+  formData.append("subranddit_id", subranddit_id);
 
-  const response = await fetch(`/api/subranddits/${data.subrandditId}`, {
+  const response = await fetch(`/api/subranddits/${data.subranddit_id}`, {
     method: "POST",
     body: formData,
   });
