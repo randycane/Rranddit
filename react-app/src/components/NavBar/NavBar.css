@@ -1,0 +1,108 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.home{
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:whitesmoke;
+}
+
+.DropDownMenuIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    height: 44px;
+    width: 55px;
+    border-radius: 35px;
+    border: 0.5px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 6px;
+    top: 75px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    align-items: center;
+    height: 150px;
+    width: 200px;
+    padding: 3px;
+}
+
+.home-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-left: 12px;
+    font-weight: 600;
+}
+
+.get-out{
+    display: flex;
+    border: none;
+    background-color: white;
+}
+
+.home-icon{
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+}
+
+.nav-bar-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1.5px solid black;
+    padding-bottom: 5px;
+    background-color: cornflowerblue;
+    width: 100%;
+    top: 0;
+    position:sticky;
+}
+
+.comm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+
+.page-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 15px;
+    color: darkblue
+}

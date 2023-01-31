@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import * as sessionActions from "../../store/session";
 import { Link, useHistory } from "react-router-dom";
+import LogoutButton from "../auth/LogoutButton";
 import "./NavBar.css";
 
 function ProfileButtonComponent({ user }) {
   const dispatch = useDispatch();
-  // const sessionUser = useSelector((state) => state.session.user);
+  const userIsLoggedIn = useSelector((state) => state.session.user);
   const [showMenu, setShowMenu] = useState(false);
   const history = useHistory();
 
@@ -33,32 +34,26 @@ function ProfileButtonComponent({ user }) {
     history.push("/");
   };
 
-
   return (
-    <>
-      <nav className="profileDropdownDiv" onClick={openMenu}>
-        <div className="profileDropdown">
-          <div className="menu_drop">
-            <span>{user.username}</span>
-          </div>
-        </div>
-        {showMenu && (
-          <div id="menu">
-            <div className="loggedInUser"> {`Greetings, ${user.username}`}</div>
-            <Link
-              className="profilePageDropdown"
-              to={`/user/${user.id}`}
-              id="dropDown1"
-            >
-              Profile
-            </Link>
-            <div onClick={logout} id="dropDown2">
-              Log out
+    <div className="nav-bar-right">
+      {userIsLoggedIn && (
+        <button className="DropDownMenuIcon" onClick={openMenu}>
+          <i className="fas fa-bars" /> <i className="fas fa-user-circle" />
+        </button>
+      )}
+
+      {showMenu && (
+        <div className="profile-dropdown">
+          <div className="comm">Welcome, {user.username}!</div>
+          <div className="comm">Profile: {user.email}</div>
+          {userIsLoggedIn && (
+            <div className="get-out">
+              <LogoutButton />
             </div>
-          </div>
-        )}
-      </nav>
-    </>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
 
