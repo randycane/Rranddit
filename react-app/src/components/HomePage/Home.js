@@ -6,6 +6,7 @@ import { getAllSubrandditsThunk } from "../../store/subranddit";
 import { ReadPostsThunk } from "../../store/post";
 import LoginModalComponent from "../LoginModal/Login";
 import PostCardComponent from "../PostCards/PostCard";
+import "./Home.css";
 
 const HomeComponent = () => {
   const dispatch = useDispatch();
@@ -91,18 +92,18 @@ const HomeComponent = () => {
             <div>Loading...</div>
           )}
         </div>
-        <div className="rowTwo">
-          <div className="homePageSubredditInfo">
-            <div className="aboutSubreddit">
+        <div className="row-two">
+          <div className="homePageSubrandditInfo">
+            <div className="recs">
               <span>Recommended Communities</span>
             </div>
-            <div className="homepageSubredditContent">
+            <div className="homepageSubrandditContent">
               {subrandditLoaded &&
                 subrandditInfo.map((subranddit) => {
                   return (
                     <div key={subranddit.id}>
                       <div
-                        className="homepageSubredditDescriptionDiv"
+                        className="homepageSubrandditDescriptionDiv"
                         onClick={(e) => subrandditsPage(subranddit.id)}
                       >
                         <div className="homepageSubrandditDescription">
@@ -128,7 +129,7 @@ const HomeComponent = () => {
                 className="createSubrandditButton"
                 onClick={createSubrandditPage}
               >
-                {" "}
+
                 Create a Subranddit
               </div>
             </div>

@@ -1,0 +1,255 @@
+.homePageDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  .rowOne {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+
+  }
+
+  .outerPostContainer {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    align-items: flex-start;
+    /* margin: auto; */
+    border: 1px solid rgb(206, 195, 195);
+    margin-bottom: 1.5rem;
+    background-color: rgb(247, 247, 252);
+    border-radius: 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .outerPostContainer:hover {
+    border: 1px solid rgb(64, 59, 59);
+  }
+
+  .createPostDiv {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    align-items: center;
+    /* margin: auto; */
+    height: 55px;
+    border: 1px solid rgb(205,205,205);
+    margin-bottom: 1.5rem;
+    background-color: rgb(255,255,255);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .createIcon {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 40px;
+  }
+
+  .createIcon>img {
+    border-radius: 50%;
+    height: 38px;
+    width: 45px;
+    background-color: rgba(123, 121, 129, 0.467);
+    margin-left: 10px;
+  }
+
+  .inputBox {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+
+  .inputBox:hover {
+    border: 1px solid rgb(64, 59, 59);
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+
+  .inputBox:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+
+  .createInputContainer>input {
+    display: flex;
+    align-items: center;
+    text-indent: 20px;
+    flex-direction: row;
+    background-color: rgb(246,247,248);
+    border-style: none;
+    border-radius: 4px;
+    width: 500px;
+    height: 38px;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+
+  .createPostDiv>input:hover {
+    cursor: text;
+  }
+
+
+  .postContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 85%;
+    padding-left: 20px;
+    background-color: white;
+
+  }
+
+  .postTopDescription {
+    display: flex;
+    font-size: 12px;
+    font-family: verdana, sans-serif;
+    color: rgb(43, 40, 40);
+    padding-top: 5px;
+  }
+
+  .postContent {
+    padding-bottom: 5px;
+    word-break: break-all;
+
+  }
+
+  .postUsername {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .postTitle {
+    font-size: 18px;
+    font-family: verdana, sans-serif;
+    color: rgb(43, 40, 40);
+    padding-top: 5px;
+    padding-bottom: 20px;
+    width: 80%;
+    word-wrap: break-word;
+  }
+
+  .postUsername:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .postImage {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .row-two {
+    display: flex;
+    width: 310px;
+    flex-direction: column;
+    align-content: flex-end;
+    margin-top: 5rem;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  .recs {
+    display: flex;
+    /* border: 1px solid red; */
+    background-color: #f2f4f5;
+    height: 330px;
+    width: 300px;
+  }
+
+  .createSubranddit {
+    display: flex;
+    border: 1px solid navy;
+    background-color: #f2f4f5;
+    margin-top: 20px;
+    height: 150px;
+    width: 310px;
+  }
+
+
+
+  .homepageSubrandditDescriptionDiv {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    border: 1px solid maroon;
+    height: 40px;
+    width: 288=7px;
+    padding: 12px;
+  }
+
+  .homepageSubrandditDescriptionDiv:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    cursor: pointer;
+  }
+
+  .homepageSubredditDescriptionDiv:active {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.708) -3px -3px 6px 1px inset;
+  }
+
+  .homepageSubrandditDescription {
+    display: flex;
+    align-content: center;
+    height: 50px;
+  }
+
+  .homePageSubrandditInfo {
+    height: 500px;
+    border: 1px solid rgb(206, 195, 195);
+    background-color: #f2f4f5;
+    border-radius: 4px;
+    overflow-y: scroll hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .homeSubredditIcon>img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+
+  .home-sub-name {
+    padding-left: 12px;
+    align-self: center;
+    font-size: 17px;
+    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+  }
+
+
+  .subrandditCreateDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red;
+    color: magenta; */
+    height: 100px;
+  }
+
+  .createSubrandditButton {
+    display: flex;
+    align-items: center;
+    font-family: verdana, sans-serif;
+    font-size: 14px;
+    justify-content: center;
+    border: 1px solid red;
+    border-radius: 9999px;
+    width: 290px;
+    height: 40px;
+    color: #f2f4f5;
+    background-color: rgb(0,121,211);
+  }
+
+  .createSubrandditButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: rgb(0, 100, 177);
+    cursor: pointer;
+  }
+
+
+  .homepageSubrandditContent {
+    overflow-y: scroll;
+    height: 350px;
+  }
