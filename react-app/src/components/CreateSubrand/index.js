@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Redirect } from "react-router-dom";
 
 import { createSubrandditThunk } from "../../store/subranddit";
+import "./CreateSubrand.css";
 
 const CreatingSubrandditComponent = () => {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ const CreatingSubrandditComponent = () => {
             <input
               className="createSubrandditInput"
               type="text"
+              placeholder="Title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
