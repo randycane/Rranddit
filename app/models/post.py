@@ -13,11 +13,7 @@ class Post(db.Model):
   #relationships
   user = db.relationship("User", back_populates="posts")
   subranddit = db.relationship("Subranddit", back_populates="posts")
-  # votes = db.relationship("Vote", back_populates="post", cascade="all, delete-orphan")
   comments = db.relationship("Comment", back_populates="post")
-
-  # def total_votes(self):
-  #   return sum(vote.value for vote in self.votes)
 
   def to_dict(self):
       return {
@@ -29,7 +25,4 @@ class Post(db.Model):
           "post_title": self.post_title,
           "img_url": self.img_url,
           "post_text": self.post_text,
-          "link_url": self.link_url,
-          # "total_votes": self.total_votes(),
-          # "votes": [vote.to_dict() for vote in self.votes],
       }
