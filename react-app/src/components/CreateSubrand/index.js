@@ -27,11 +27,11 @@ const CreatingSubrandditComponent = () => {
       banner_img: bannerImage,
     };
     return dispatch(createSubrandditThunk(newSubrandditData)).then(
-      async (res) => {
-        if (!res.errors) {
+      async (response) => {
+        if (!response.errors) {
           setSubmitSuccess(true);
         } else {
-          setErrors(Object.values(res.errors));
+          setErrors(Object.values(response.errors));
         }
       }
     );

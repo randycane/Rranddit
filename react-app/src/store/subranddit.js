@@ -62,7 +62,7 @@ export const getAllSubrandditsThunk = () => async (dispatch) => {
     dispatch(loadSubsAction(data));
     return data;
   }
-  // return response;
+  return response;
 };
 
 // create a subranddit:
@@ -81,7 +81,12 @@ export const createSubrandditThunk = (subranddit) => async (dispatch) => {
     dispatch(createNewSubAction(newSubr));
     return newSubr;
   }
-  // return response.json()
+  else if (response.status < 500) {
+    // error handling
+    return await response.json();
+  } else {
+    return ["An error occurred. Please try again."];
+  }
 };
 
 // Get a single subranddit:
