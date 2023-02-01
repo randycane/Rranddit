@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import LoginForm from './components/auth/LoginForm';
+//import LoginForm from './components/auth/LoginForm';
 import SignUpForm from './components/auth/SignUpForm';
 //import NavBar from './components/NavBar/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
@@ -13,6 +13,8 @@ import HomeComponent from './components/HomePage/Home';
 import CreatingSubrandditComponent from './components/CreateSubrand';
 import NavBarComponent from './components/NavBar/NavBar';
 import LoginModalComponent from './components/LoginModal/Login';
+import SubrandPageComponent from './components/SubrandPage';
+import UpdateSubrandditComponent from './components/UpdateSubrand';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -42,6 +44,9 @@ function App() {
         <Route path='/sign-up' exact={true}>
           <SignUpForm />
         </Route>
+        <Route path="/r/:subrandditId" exact={true}>
+          <SubrandPageComponent />
+        </Route>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
@@ -53,6 +58,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/create-subranddit" exact={true}>
           <CreatingSubrandditComponent />
+        </ProtectedRoute>
+        <ProtectedRoute path="/r/:subrandditId/edit" exact={true}>
+          <UpdateSubrandditComponent />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

@@ -5,6 +5,7 @@ const LOAD_SUBS = "subranddit/load";
 const EDIT_SUB = "subranddit/edit";
 const LOAD_SUB_BY_ID = "subrandditId/load";
 const DEL_SUB = "subranddit/delete";
+const SUBSCRIBE_TO_SUB = "subranddit/subscribe";
 
 // Action creators:
 
@@ -40,6 +41,13 @@ const deleteSubAction = (payload) => {
   return {
     type: DEL_SUB,
     payload,
+  };
+};
+
+const subscribeToSubAction = (subrandditId) => {
+  return {
+    type: SUBSCRIBE_TO_SUB,
+    subrandditId,
   };
 };
 
@@ -112,6 +120,20 @@ export const deleteSubThunk = (id) => async (dispatch) => {
   }
 };
 
+// Subscribing to a subranddit:
+export const subscribeToSubrandditThunk =
+  (subrandditId) => async (dispatch) => {
+    const res = await fetch(`/api/subranddits/${subrandditId}/subscribe`, {
+      method: "POST",
+    });
+    if (res.ok) {
+      dispatch(subscribeToSubAction(subrandditId));
+      return subrandditId;
+    }
+    return res;
+  };
+
+
 // Subranddit Reducer:
 
 let initialState = {};
@@ -145,6 +167,9 @@ const SubrandditReducer = (state = initialState, action) => {
       newState = { ...state };
       delete newState[action.payload];
       return newState;
+    }
+    case SUBSCRIBE_TO_SUB: {
+      newState = { ...state };
     }
     default:
       return state;
