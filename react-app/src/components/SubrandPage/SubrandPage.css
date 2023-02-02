@@ -1,0 +1,30 @@
+.subr-icon {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+.joinToggleSubrandditButton {
+  border-radius: 9999px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  font-family: verdana, sans-serif;
+  font-size: 14px;
+  justify-content: center;
+  color: #f2f4f5;
+  border-style: none;
+  background-color: lightblue;
+}
+
+.joinToggleSubrandditButton:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: royalblue;
+  cursor: pointer;
+}
+
+.underneath{
+    color: midnightblue;
+    font-weight: 600;
+}

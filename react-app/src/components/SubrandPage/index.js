@@ -136,7 +136,7 @@ const SubrandPageComponent = () => {
                                     modalToggle={setIsUpdateSubModalIsOpen}
                                   />
                                   <button
-                                    className="deleteSubredditButton"
+                                    className="deletion-button"
                                     onClick={() =>
                                       deleteSubranddit(subranddit.id)
                                     }
@@ -162,7 +162,7 @@ const SubrandPageComponent = () => {
 
                             </div>
                             <div className="underneath">
-                              <span>r/{subranddit.name}</span>
+                              <span>r/{subranddit.title}</span>
                             </div>
                           </div>
                         </div>
@@ -172,7 +172,7 @@ const SubrandPageComponent = () => {
                 );
               })}
               <div className="homePageDiv">
-                <div className="rowOneSubreddit">
+                <div className="sub-row">
                   <div className="createPostDiv">
                     <div className="create">
                     </div>
