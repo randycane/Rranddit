@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import "./PostCard.css";
 
 const PostCardComponent = ({post}) => {
 
 
     return (
-        <div className="post-top">
+      <div className="post-top">
+        <div className="post-each">
           <div className="post-title">{post?.post_title}</div>
           <div className="post-img">
             <img
-              src={post?.image_url}
+              src={post?.img_url}
               alt="n/a"
               onError={(e) => {
                 e.currentTarget.src =
@@ -20,7 +22,8 @@ const PostCardComponent = ({post}) => {
           </div>
           <div className="post-words">{post?.post_text}</div>
           <div className="undercard">
-          </div>
+        </div>
+        </div>
         </div>
       );
 }
