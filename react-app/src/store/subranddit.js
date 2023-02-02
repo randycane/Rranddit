@@ -5,6 +5,7 @@ const LOAD_SUBS = "subranddit/load";
 const EDIT_SUB = "subranddit/edit";
 const LOAD_SUB_BY_ID = "subrandditId/load";
 const DEL_SUB = "subranddit/delete";
+const LOAD_MY_SUBS = "subranddit/get_mine";
 const SUBSCRIBE_TO_SUB = "subranddit/subscribe";
 
 // Action creators:
@@ -19,6 +20,13 @@ const createNewSubAction = (payload) => {
 const loadSubsAction = (payload) => {
   return {
     type: LOAD_SUBS,
+    payload,
+  };
+};
+
+const getMyOwnSubsAction = (payload) => {
+  return {
+    type: LOAD_MY_SUBS,
     payload,
   };
 };
@@ -96,6 +104,17 @@ export const getSubFromIdThunk = (subrandditId) => async (dispatch) => {
   if (response.ok) {
     const thisSub = await response.json();
     dispatch(readOneSubAction(thisSub));
+  }
+  return response;
+};
+
+// Get all my own subs:
+export const getMyOwnSubsThunk = () => async (dispatch) => {
+  const response = await fetch(`/api/subranddits/subscriptions`, {});
+  if (response.ok) {
+    const subranddits = await response.json();
+    dispatch(getMyOwnSubsAction(subranddits));
+    return subranddits;
   }
   return response;
 };

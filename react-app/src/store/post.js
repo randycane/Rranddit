@@ -6,7 +6,7 @@ const EDIT_POST = "post/edit";
 const LOAD_POST_BY_SUB = "subranddit/load_by_sub";
 const LOAD_POST_BY_POST = "post/read";
 const DEL_POST = "post/delete";
-const GET_USER = "post/writer";
+const GET_USER_POSTS = "post/my_posts";
 
 // action types for voting:
 const UPVOTE_POST = "post/upvote";
@@ -20,6 +20,13 @@ const DOWNVOTE_POST = "post/downvote";
 //         payload
 //     }
 // }
+
+const getMyPostsAction = (posts) => {
+  return {
+    type: GET_USER_POSTS,
+    posts,
+  };
+};
 
 const writePostAction = (subrandditId) => {
   return {
@@ -124,7 +131,7 @@ export const ReadPostsThunk = () => async (dispatch) => {
   }
 };
 
-//Get user
+//Get user posts for profile page:
 // export const GetUserThunk = () => async dispatch => {
 //     const response = await fetch(`/api/users`)
 //     if (response.ok) {
@@ -133,6 +140,16 @@ export const ReadPostsThunk = () => async (dispatch) => {
 //         return thisWriter;
 //     }
 // }
+
+export const getMyPostsThunk = (userId) => async (dispatch) => {
+  const response = await fetch(`/api/users/${userId}/posts_by_user`, {});
+  if (response.ok) {
+    const posts = await response.json();
+    dispatch(getMyPostsAction(posts));
+    return posts;
+  }
+  return response;
+};
 
 // Get all posts by its subranddit id:
 export const ReadPostBySubrandditIdThunk =
@@ -245,9 +262,9 @@ const postReducer = (state = initialState, action) => {
       });
       return { ...newState };
     }
-    case GET_USER: {
-      action.payload.forEach((user) => {
-        newState[user.id] = user;
+    case GET_USER_POSTS: {
+      action.posts.forEach((post) => {
+        newState[post.id] = post;
       });
       return { ...newState };
     }

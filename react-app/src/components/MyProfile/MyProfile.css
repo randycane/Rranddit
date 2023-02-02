@@ -1,0 +1,16 @@
+.userProfileInfo {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f4f5;
+    height: 380px;
+    width: 320px;
+    margin-top: 1.34rem;
+    border-radius: 4px;
+  }
+
+  .userProfileBanner {
+    height: 95px;
+    background-color: rgb(9, 105, 179);
+    border-radius: 4px;
+
+  }

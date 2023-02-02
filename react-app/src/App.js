@@ -16,6 +16,7 @@ import LoginModalComponent from './components/LoginModal/Login';
 import SubrandPageComponent from './components/SubrandPage';
 import UpdateSubrandditComponent from './components/UpdateSubrand';
 import UpdatePostComponent from './components/UpdatePost';
+import MyProfileComponent from './components/MyProfile/MyProfile';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -51,8 +52,11 @@ function App() {
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
-        <ProtectedRoute path='/users/:userId' exact={true} >
+        {/* <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
+        </ProtectedRoute> */}
+        <ProtectedRoute path="/user/:userId" exact={true}>
+          <MyProfileComponent />
         </ProtectedRoute>
         <ProtectedRoute path="/create-post" exact={true}>
           <CreatingPostComponent />
