@@ -2,8 +2,8 @@
   border-radius: 50%;
   width: 75px;
   height: 75px;
-  margin-top: 4px;
-  margin-left: 4px;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 .joinToggleSubrandditButton {
   border-radius: 9999px;
@@ -11,9 +11,9 @@
   display: flex;
   align-items: center;
   font-family: verdana, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   justify-content: center;
-  color: #f2f4f5;
+  color: #c3d9e4;
   border-style: none;
   background-color: lightblue;
 }
