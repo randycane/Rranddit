@@ -23,7 +23,6 @@ function WriteACommentComponent({ post }) {
       if (!response.errors) {
         setSubmitSuccess(true);
         setText("");
-        onSuccess && onSuccess();
       } else {
         setErrors(Object.values(response.errors));
       }

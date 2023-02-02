@@ -6,7 +6,7 @@ import SignUpForm from './components/auth/SignUpForm';
 //import NavBar from './components/NavBar/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
-import User from './components/User';
+//import User from './components/User';
 import { authenticate } from './store/session';
 import CreatingPostComponent from './components/CreatePosts/CreatePosts';
 import HomeComponent from './components/HomePage/Home';
@@ -17,6 +17,8 @@ import SubrandPageComponent from './components/SubrandPage';
 import UpdateSubrandditComponent from './components/UpdateSubrand';
 import UpdatePostComponent from './components/UpdatePost';
 import MyProfileComponent from './components/MyProfile/MyProfile';
+import PostDetailComponent from './components/PostDetails/PostDetails';
+import ErrorPageComponent from './components/ErrorPage/ErrorPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -40,6 +42,9 @@ function App() {
         <ProtectedRoute path='/' exact={true} >
           <HomeComponent/>
         </ProtectedRoute>
+        <Route path="/posts/:postId" exact={true}>
+          <PostDetailComponent />
+        </Route>
         <Route path='/login' exact={true}>
           <LoginModalComponent isOpen={true} modalToggle={() => {}}/>
         </Route>
@@ -70,6 +75,9 @@ function App() {
         <ProtectedRoute path="/r/:subrandditId/edit" exact={true}>
           <UpdateSubrandditComponent />
         </ProtectedRoute>
+        <Route>
+          <ErrorPageComponent />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

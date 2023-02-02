@@ -72,8 +72,12 @@ export const editCommentThunk = (payload, postId) => async (dispatch) => {
   if (response.ok) {
     const updatedComm = await response.json();
     dispatch(updateComment(updatedComm));
+    return updatedComm;
+  } else if (response.status < 500) {
+    return await response.json();
+  } else {
+    return ["An error occurred. Please try again"];
   }
-  return response;
 };
 
 export const deleteCommentThunk = (id) => async (dispatch) => {

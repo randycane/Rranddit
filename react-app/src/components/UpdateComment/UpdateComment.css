@@ -1,0 +1,17 @@
+.edit-comm {
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    align-items: center;
+    font-family: verdana, sans-serif;
+    font-size: 12px;
+    margin-left: 5px;
+    justify-content: center;
+    color: floralwhite;
+    border-style: none;
+    background-color: royalblue;
+  }
+
+  .edit-comm:hover{
+      cursor: pointer;
+  }
