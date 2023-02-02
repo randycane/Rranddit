@@ -160,7 +160,7 @@ export const SeePostByItsPostIdThunk =
 
 // Edit your post hits:
 export const EditPostThunk = (payloadData) => async (dispatch) => {
-  const { id, post_title, post_text, image_url, author_id, subranddit_id } =
+  const { id, post_title, post_text, img_url, user_id, subranddit_id } =
     payloadData;
   const response = await fetch(`/api/posts/${id}`, {
     method: "PUT",
@@ -169,8 +169,8 @@ export const EditPostThunk = (payloadData) => async (dispatch) => {
       id,
       post_title,
       post_text,
-      image_url,
-      author_id,
+      img_url,
+      user_id,
       subranddit_id,
     }),
   });
@@ -178,6 +178,10 @@ export const EditPostThunk = (payloadData) => async (dispatch) => {
     const editted = await response.json();
     dispatch(editPostAction(editted));
     return editted;
+  } else if (response.status < 500) {
+    return await response.json();
+  } else {
+    return ["An error occurred. Please try again."];
   }
 };
 

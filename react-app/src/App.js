@@ -15,6 +15,7 @@ import NavBarComponent from './components/NavBar/NavBar';
 import LoginModalComponent from './components/LoginModal/Login';
 import SubrandPageComponent from './components/SubrandPage';
 import UpdateSubrandditComponent from './components/UpdateSubrand';
+import UpdatePostComponent from './components/UpdatePost';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -55,6 +56,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/create-post" exact={true}>
           <CreatingPostComponent />
+        </ProtectedRoute>
+        <ProtectedRoute path="/posts/:postId/edit" exact={true}>
+          <UpdatePostComponent />
         </ProtectedRoute>
         <ProtectedRoute path="/create-subranddit" exact={true}>
           <CreatingSubrandditComponent />
