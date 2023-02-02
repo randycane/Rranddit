@@ -197,7 +197,7 @@ const MyProfileComponent = () => {
                                     ></img>
                                   </div>
                                   <div className="followed">
-                                    {subranddit.name}
+                                    {subranddit.title}
                                   </div>
                                 </div>
                               </div>

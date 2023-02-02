@@ -56,6 +56,10 @@ export const createCommentThunk = (post) => async (dispatch) => {
     const newComm = await response.json();
     dispatch(writeComment(newComm));
     return newComm;
+  } else if (response.status < 500) {
+    return await response.json();
+  } else {
+    return ["An error occurred. Please try again"];
   }
 };
 

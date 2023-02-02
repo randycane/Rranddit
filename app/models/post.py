@@ -21,7 +21,7 @@ class Post(db.Model):
           "user_id": self.user_id,
           "username": self.user.username,
           "subranddit_id": self.subranddit_id,
-          "subranddit_name": self.subranddit.name,
+          "subranddit_name": self.subranddit.title,
           "post_title": self.post_title,
           "img_url": self.img_url,
           "post_text": self.post_text,
