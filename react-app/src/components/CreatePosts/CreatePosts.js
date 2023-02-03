@@ -34,6 +34,9 @@ const CreatingPostComponent = () => {
     return <Redirect to="/" />;
   }
 
+  const handleSubrandditChange = (e) => {
+    setSubranddit(e.target.value);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
@@ -41,8 +44,8 @@ const CreatingPostComponent = () => {
     formData.append("post_title", postTitle);
     formData.append("subranddit_id", subranddit);
     formData.append("post_text", text);
-    formData.append("image", image);
     formData.append("img_url", imgUrl);
+
 
     return dispatch(WriteAPostThunk(formData)).then(async (response) => {
       if (!response.errors) {
@@ -53,9 +56,6 @@ const CreatingPostComponent = () => {
     });
   };
 
-  const handleSubrandditChange = (e) => {
-    setSubranddit(e.target.value);
-  };
 
   return (
     <div className="post-page-container">

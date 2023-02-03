@@ -21,11 +21,13 @@ const SubrandPageComponent = () => {
   const subrandditInfo = useSelector((state) =>
     Object.values(state?.subranddits)
   );
+
   const posts = useSelector((state) => {
     let posts = Object.values(state.posts);
 
     return posts;
   });
+
   const sessionUser = useSelector((state) => state.session.user);
 
   const [loginFormModalIsOpen, setIsLoginFormModalIsOpen] = useState(false);
@@ -64,7 +66,7 @@ const SubrandPageComponent = () => {
     if (!sessionUser) {
       setIsLoginFormModalIsOpen(true);
     } else {
-      let path = `/submit?subranddit_id=${subrandditId}`;
+      let path = `/create-post?subranddit_id=${subrandditId}`;
       history.push(path);
     }
   };
