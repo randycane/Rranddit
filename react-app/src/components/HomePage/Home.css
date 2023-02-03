@@ -9,8 +9,7 @@
   .rowOne {
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
-
+    margin-top: 3rem;
   }
 
   .outerPostContainer {
@@ -146,15 +145,18 @@
     display: flex;
     width: 310px;
     flex-direction: column;
-    align-content: flex-end;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 20px;
     margin-right: 10px;
   }
 
   .recs {
     display: flex;
-    /* border: 1px solid red; */
+    flex-direction: column;
+    align-items: center;
+    color: navy;
+    font-weight: 600;
+    margin: 3px;
     background-color: #f2f4f5;
     height: 330px;
     width: 300px;
@@ -169,7 +171,11 @@
     width: 310px;
   }
 
-
+  .homepageSubrandditContent{
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+  }
 
   .homepageSubrandditDescriptionDiv {
     display: flex;
@@ -177,8 +183,8 @@
     align-content: center;
     border: 1px solid maroon;
     height: 40px;
-    width: 288=7px;
-    padding: 12px;
+    width: 24px;
+    padding: 3px;
   }
 
   .homepageSubrandditDescriptionDiv:hover {
@@ -186,6 +192,11 @@
     cursor: pointer;
   }
 
+  .homeSubrandditIcon{
+    display: flex;
+    height: 40px;
+    width: 80px;
+  }
 
   .homepageSubrandditDescription {
     display: flex;

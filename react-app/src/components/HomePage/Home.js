@@ -129,7 +129,6 @@ const HomeComponent = () => {
                 className="createSubrandditButton"
                 onClick={createSubrandditPage}
               >
-
                 Create a Subranddit
               </div>
             </div>
