@@ -4,8 +4,8 @@ class Post(db.Model):
   __tablename__ = "posts"
 
   id = db.Column(db.Integer, primary_key=True)
-  user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
-  subranddit_id = db.Column(db.Integer, db.ForeignKey("subranddits.id"), nullable=False)
+  user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+  subranddit_id = db.Column(db.Integer, db.ForeignKey("subranddits.id"))
   post_title = db.Column(db.String(200), nullable=False)
   img_url = db.Column(db.String)
   post_text = db.Column(db.String)

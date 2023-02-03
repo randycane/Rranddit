@@ -62,7 +62,7 @@ const subscribeToSubAction = (subrandditId) => {
 //Thunks:
 // Get all subs:
 export const getAllSubrandditsThunk = () => async (dispatch) => {
-  const response = await fetch(`/api/subranddits/`, {
+  const response = await fetch(`/api/subranddits/all`, {
     method: "GET",
   });
   if (response.ok) {

@@ -119,7 +119,7 @@ const SubrandPageComponent = () => {
                           ></img>
                           <div className="titlediv">
                             <div className="big-div">
-                              <span> {subranddit.name} </span>
+                              <span> {subranddit.title} </span>
 
                               {userMadeSubranddit ? (
                                 <div className="sub-button-div">

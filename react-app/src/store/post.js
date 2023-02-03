@@ -104,21 +104,45 @@ const downvotePostAction = (payload) => {
 // }
 
 //Creating a post:
-export const WriteAPostThunk = (data) => async (dispatch) => {
-  const { post_title, post_text, img_url, subranddit_id } = data;
-  const formData = new FormData();
-  formData.append("post_title", post_title);
-  formData.append("post_text", post_text);
-  formData.append("img_url", img_url);
-  formData.append("subranddit_id", subranddit_id);
+// export const WriteAPostThunk = (formData) => async (dispatch) => {
+//   const { post_title, post_text, img_url, subranddit_id } = formData;
+//   const formData = new FormData();
+//   formData.append("post_title", post_title);
+//   formData.append("post_text", post_text);
+//   formData.append("img_url", img_url);
+//   formData.append("subranddit_id", subranddit_id);
 
-  const response = await fetch(`/api/subranddits/${data.subranddit_id}`, {
+//   const response = await fetch(`/api/subranddits/${formData.subranddit_id}`, {
+//     method: "POST",
+//     body: formData,
+//   });
+//   const newPost = await response.json();
+//   if (response.ok) {
+//     dispatch(writePostAction(newPost));
+//     return newPost;
+//   } else if (response.status < 500) {
+//     // error handling
+//     return await response.json();
+//   } else {
+//     return ["An error occurred. Please try again."];
+//   }
+// };
+
+export const WriteAPostThunk= (newPost) => async (dispatch) => {
+  const response = await fetch("/api/posts/", {
     method: "POST",
-    body: formData,
+    body: newPost,
   });
-  const newPost = await response.json();
-  dispatch(writePostAction(newPost));
-  return newPost;
+  if (response.ok) {
+    const post = await response.json();
+    dispatch(writePostAction(post));
+    return post;
+  } else if (response.status < 500) {
+    // error handling
+    return await response.json();
+  } else {
+    return ["An error occurred. Please try again."];
+  }
 };
 
 // Read all posts:

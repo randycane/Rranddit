@@ -44,11 +44,11 @@ const CreatingPostComponent = () => {
     formData.append("image", image);
     formData.append("img_url", imgUrl);
 
-    return dispatch(WriteAPostThunk(formData)).then(async (res) => {
-      if (!res.errors) {
+    return dispatch(WriteAPostThunk(formData)).then(async (response) => {
+      if (!response.errors) {
         setSubmitSuccess(true);
       } else {
-        setErrors(Object.values(res.errors));
+        setErrors(Object.values(response.errors));
       }
     });
   };
@@ -78,7 +78,7 @@ const CreatingPostComponent = () => {
                     value={subranddit.id}
                     selected={subranddit.id === subrandditId}
                   >
-                    r/{subranddit.name}
+                    r/{subranddit.title}
                   </option>
                 );
               })}

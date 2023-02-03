@@ -51,8 +51,7 @@ def create_post():
 
     new_post = Post(
       post_title = form.data["post_title"],
-      img_url = url,
-      link_url = form.data["link_url"],
+      img_url = form.data['img_url'],
       post_text = form.data["post_text"],
       user_id = current_user.id,
       subranddit_id  = form.data["subranddit_id"],
@@ -82,7 +81,6 @@ def edit_post(post_id):
   if form.validate_on_submit():
     edited_post.title = form.data['post_title']
     edited_post.img_url = form.data['img_url']
-    edited_post.link_url = form.data['link_url']
     edited_post.text = form.data['post_text']
 
     db.session.commit()
