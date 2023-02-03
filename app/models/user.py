@@ -9,6 +9,7 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
+    # profile_image = db.Column(db.String, default="https://c.tenor.com/59l1VjOQOocAAAAC/reddit-profile.gif")
     hashed_password = db.Column(db.String(255), nullable=False)
 
     #relationships
@@ -32,5 +33,6 @@ class User(db.Model, UserMixin):
         return {
             'id': self.id,
             'username': self.username,
-            'email': self.email
+            'email': self.email,
+            # 'profile_image': self.profile_image,
         }

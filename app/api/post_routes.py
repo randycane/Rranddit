@@ -103,3 +103,11 @@ def delete_post(post_id):
     return {'message': 'Successfully deleted post'}
   else:
     return {'message': 'Only post author can delete post', 'statusCode': 403}
+
+# Get all comments for a post:
+@post_routes.route("/<int:post_id>/comments")
+def get_comments(post_id):
+  posts_comments = Comment.query.filter(Comment.post_id == post_id).all()
+
+  all_posts_comments = [comment.to_dict() for comment in posts_comments]
+  return jsonify(all_posts_comments)
