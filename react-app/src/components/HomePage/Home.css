@@ -17,7 +17,6 @@
     flex-direction: row;
     width: 600px;
     align-items: flex-start;
-    /* margin: auto; */
     border: 1px solid rgb(206, 195, 195);
     margin-bottom: 1.5rem;
     background-color: rgb(247, 247, 252);
@@ -34,7 +33,6 @@
     flex-direction: row;
     width: 600px;
     align-items: center;
-    /* margin: auto; */
     height: 55px;
     border: 1px solid rgb(205,205,205);
     margin-bottom: 1.5rem;
@@ -46,7 +44,7 @@
   .createIcon {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 40px;
     width: 40px;
   }
 
@@ -112,7 +110,6 @@
   .postContent {
     padding-bottom: 5px;
     word-break: break-all;
-
   }
 
   .postUsername {
@@ -182,7 +179,7 @@
     flex-direction: row;
     align-content: center;
     border: 1px solid maroon;
-    height: 40px;
+    height: 80px;
     width: 24px;
     padding: 3px;
   }
