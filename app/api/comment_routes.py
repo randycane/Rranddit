@@ -18,7 +18,7 @@ def edit_comment(commentId):
     return {"message": "You don't have authorization to edit this comment", "statusCode": 403}
 
   if form.validate_on_submit():
-    edited_comment.text = form.data['comment_text']
+    edited_comment.comment_text = form.data['comment_text']
 
     db.session.commit()
     return edited_comment.to_dict()
