@@ -1,0 +1,123 @@
+.post-page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 5rem;
+  padding: 25px;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  background-color: rgb(240, 237, 225);
+}
+
+.posting-container {
+  display: flex;
+  flex-direction: column;
+  padding: 33px;
+  margin-top: 3rem;
+  margin: auto;
+  width: 80%;
+}
+
+.create-post{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
+.errorDiv{
+    color:red;
+}
+.sub-dropdown {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 300px;
+    margin-bottom: 5px;
+    height: 45px;
+  }
+
+  .createTitleInputBox{
+      display: flex;
+      flex-direction: column;
+      margin: 5px;
+  }
+
+  .createTextInputBox{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.sub-select {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 30px;
+    width: 300px;
+    border-color: rgba(128, 128, 128, 0.528);
+    outline: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: rgba(20, 20, 77, 0.1) 0px 1px 0px;
+  }
+
+  .create-input{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px;
+  }
+
+  .createPostButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+    width: 95%;
+    height: 30px;
+  }
+
+  .createPostButtonDiv button {
+    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 120px;
+    height: 33px;
+    border-radius: 9999px;
+    border-style:none ;
+    color: white;
+    margin-left: 10px;
+    margin-right: 12px;
+    background-color: rgb(23, 133, 218);
+  }
+
+  .createPostButtonDiv button:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+    background-color: rgb(24, 106, 169);
+    cursor: pointer;
+  }
+
+  .img-form{
+    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .side-container{
+      border: 1px solid royalblue;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .post-rules  {
+    width: 260px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .rule-list  {
+    width: 260px;
+    font-size: 15px;
+    padding: 10px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }

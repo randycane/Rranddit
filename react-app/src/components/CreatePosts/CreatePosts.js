@@ -5,6 +5,8 @@ import { Redirect } from "react-router-dom";
 import { WriteAPostThunk } from "../../store/post";
 import { getAllSubrandditsThunk } from "../../store/subranddit";
 
+import "./CreatePost.css";
+
 const CreatingPostComponent = () => {
   const dispatch = useDispatch();
   const subranddits = useSelector((state) => Object.values(state?.subranddits));
@@ -112,7 +114,7 @@ const CreatingPostComponent = () => {
                   />
                 </label>
               </div>
-              <label className="form">
+              <label className="img-form">
                 <span> Image (optional): </span>
                 <input
                   type="text"
