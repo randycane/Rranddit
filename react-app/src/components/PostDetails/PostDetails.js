@@ -136,9 +136,9 @@ const PostDetailComponent = () => {
                             <>
                               <div className="commentDiv">
                                 <div className="commenterIconDiv">
-                                  <div className="commenterIcon">
+                                  {/* <div className="commenterIcon">
                                     <img src={comment.user_profile_image}></img>
-                                  </div>
+                                  </div> */}
                                 </div>
                                 <div className="commentContent">
                                   <div className="commentHeader">
@@ -210,7 +210,7 @@ const PostDetailComponent = () => {
             subrandditInfo.map((subranddit) => {
               return (
                 <>
-                  <div className="subr0info">
+                  <div className="subr-info">
                     <div className="postPage">
                       <img
                         src={subranddit.banner_img}

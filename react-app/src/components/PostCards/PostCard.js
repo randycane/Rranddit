@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+import PostDetailComponent from "../PostDetails/PostDetails";
 import "./PostCard.css";
 
 const PostCardComponent = ({post}) => {
@@ -9,6 +10,9 @@ const PostCardComponent = ({post}) => {
     return (
       <div className="post-top">
         <div className="post-each">
+        {/* <Link to={`/posts/${post.id}`}>
+                    <PostDetailComponent post={post} />
+                  </Link> */}
           <div className="post-title">{post?.post_title}</div>
           <div className="post-img">
             <img
