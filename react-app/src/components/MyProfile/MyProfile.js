@@ -172,8 +172,8 @@ const MyProfileComponent = () => {
                   </div>
                 )}
                 {userOwnsProfile && (
-                  <div className="followedSubredditInfo">
-                    <div className="aboutFollowedSubreddit">
+                  <div className="followed-subr">
+                    <div className="about-followed">
                       <span>Followed Subranddits</span>
                     </div>
                     <div className="followedSubredditContent">
@@ -189,7 +189,7 @@ const MyProfileComponent = () => {
                                   <div className="homeSubredditIcon">
                                     <img
                                       src={subranddit.icon_url}
-                                      alt="subredditIcon"
+                                      alt="subrandditIcon"
                                       onError={(e) => {
                                         e.currentTarget.src =
                                           "https://i.imgur.com/hkMSod3.png";
