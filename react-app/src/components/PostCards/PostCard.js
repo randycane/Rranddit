@@ -25,7 +25,7 @@ const PostCardComponent = ({post}) => {
   };
 
     return (
-      <div className="post-top" key={post.id}>
+      <div className="post-top" >
         <div className="post-each">
           <div
             className="postSubrandditName"
@@ -39,9 +39,21 @@ const PostCardComponent = ({post}) => {
           >
             Posted by u/{post.username}
           </div>
-          <NavLink className="post-title" to={`/posts/${post.id}`}>{post?.post_title}</NavLink>
+          {/* <div className="postTitle" onClick={(e) => postDetailPage(post.id)}>
+          <span
+            className="postTitleSpan"
+            onClick={(e) => postDetailPage(post.id)}
+          >
+            {post.post_title}
+          </span>
+        </div> */}
+
+
+          {/* <NavLink className="post-title" to={`/posts/${post.id}`}>{post?.post_title}</NavLink> */}
+          <div className="post-words">{post?.post_title}</div>
+            <div className="post-words">{post?.post_text}</div>
           <div className="post-img">
-            <img
+            <img className="img-pic"
               src={post?.img_url}
               alt="n/a"
               onError={(e) => {
@@ -50,7 +62,6 @@ const PostCardComponent = ({post}) => {
               }}
             />
           </div>
-          <div className="post-words">{post?.post_text}</div>
           <div className="undercard">
         </div>
         </div>

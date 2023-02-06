@@ -111,7 +111,7 @@ const HomeComponent = () => {
                       >
                         <div className="homepageSubrandditDescription">
                           <div className="homeSubrandditIcon">
-                            <img
+                            <img className="subr-img-cover"
                               src={subranddit.icon_url}
                               alt="subrandditIcon"
                               onError={(e) => {

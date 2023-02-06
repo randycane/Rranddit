@@ -155,13 +155,15 @@
   .recs {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    color: navy;
+    color: ivory;
     font-weight: 600;
     margin: 3px;
-    background-color: #f2f4f5;
-    /* height: 330px; */
-    width: 300px;
+    background-color: royalblue;
+    height: 30px;
+    width: 98%;
+    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
   }
 
   .createSubranddit {
@@ -194,6 +196,12 @@
   .homepageSubrandditDescriptionDiv:hover {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     cursor: pointer;
+  }
+
+  .subr-img-cover{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
   }
 
   .homeSubrandditIcon{

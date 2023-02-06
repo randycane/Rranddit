@@ -32,15 +32,23 @@
 .post-img{
     display: flex;
     flex-direction: column;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 4px;
+}
+
+.img-pic{
+    width: 50px;
+    height: 50px;
     object-fit: cover;
 }
 
 .post-words{
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .editing-button{
@@ -61,4 +69,20 @@
     font-size: 15px;
     background-color:orange;
     margin: 4px;
+}
+
+.postSubrandditName{
+    font-weight: 700;
+    margin: 1px;
+    color: rgb(32, 81, 227);
+}
+
+.postSubrandditName:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.postUsername{
+    font-weight: 600;
+    color: rgb(130, 125, 125)
 }
