@@ -51,6 +51,9 @@ function App() {
         <Route path="/posts/:postId" exact={true}>
           <PostDetailComponent />
         </Route>
+        <Route path="/r/:subrandditId" exact={true}>
+          <SubrandPageComponent />
+        </Route>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
@@ -66,9 +69,6 @@ function App() {
         <ProtectedRoute path="/create-subranddit" exact={true}>
           <CreatingSubrandditComponent />
         </ProtectedRoute>
-        <Route path="/r/:subrandditId" exact={true}>
-          <SubrandPageComponent />
-        </Route>
         <ProtectedRoute path="/r/:subrandditId/edit" exact={true}>
           <UpdateSubrandditComponent />
         </ProtectedRoute>

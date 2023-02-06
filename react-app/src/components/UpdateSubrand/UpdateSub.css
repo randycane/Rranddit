@@ -1,3 +1,20 @@
+.subr-create-post{
+    width: 120px;
+    border-radius: 50px;
+    border-style:none ;
+    background-color: rgb(1,121,211);
+    color: white;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subr-create-post:hover{
+  cursor: pointer;
+}
+
 .editSubredditFormContainer {
     display: flex;
     flex-direction: row;

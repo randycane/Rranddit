@@ -7,7 +7,7 @@ import "./UpdateSub.css";
 
 const UpdateSubrandditComponent = ({ onClose }) => {
   let { subrandditId } = useParams();
-
+  subrandditId = Number(subrandditId);
   const dispatch = useDispatch();
 
   let subranddit = useSelector((state) => Object.values(state?.subranddits));

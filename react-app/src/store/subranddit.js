@@ -120,11 +120,11 @@ export const getMyOwnSubsThunk = () => async (dispatch) => {
 };
 
 // editing a sub:
-export const editSubThunk = (payload, subrandditId) => async (dispatch) => {
-  const response = await fetch(`/api/subranddits/${subrandditId}`, {
+export const editSubThunk = (data) => async (dispatch) => {
+  const response = await fetch(`/api/subranddits/${data.id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(data),
   });
   if (response.ok) {
     const updatedSubr = await response.json();
@@ -139,7 +139,7 @@ export const editSubThunk = (payload, subrandditId) => async (dispatch) => {
 
 //delete a sub:
 export const deleteSubThunk = (id) => async (dispatch) => {
-  const response = await fetch(`/api/subranddits/${id}/delete`, {
+  const response = await fetch(`/api/subranddits/${id}`, {
     method: "DELETE",
   });
 

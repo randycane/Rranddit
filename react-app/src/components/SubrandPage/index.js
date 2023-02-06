@@ -18,13 +18,13 @@ const SubrandPageComponent = () => {
   const history = useHistory();
 
   let { subrandditId } = useParams();
+  subrandditId = Number(subrandditId);
   const subrandditInfo = useSelector((state) =>
     Object.values(state?.subranddits)
   );
 
   const posts = useSelector((state) => {
     let posts = Object.values(state.posts);
-
     return posts;
   });
 
@@ -214,9 +214,9 @@ const SubrandPageComponent = () => {
                               {subranddit.description}
                             </div>
                           </div>
-                          <div className="subr-CreatePostDiv">
+                          <div className="subr-create-post">
                             <div
-                              className="create-tPost"
+                              className="create-Post"
                               onClick={createPostPage}
                             >
                               {" "}
