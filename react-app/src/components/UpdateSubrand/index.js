@@ -47,11 +47,11 @@ const UpdateSubrandditComponent = ({ onClose }) => {
       icon_url: iconUrl,
       banner_img: bannerImage,
     };
-    return dispatch(editSubThunk(newSubrandditData)).then(async (res) => {
-      if (!res.errors) {
+    return dispatch(editSubThunk(newSubrandditData)).then(async (response) => {
+      if (!response.errors) {
         setSubmitSuccess(true);
       } else {
-        setErrors(Object.values(res.errors));
+        setErrors(Object.values(response.errors));
       }
     });
   };
@@ -60,7 +60,7 @@ const UpdateSubrandditComponent = ({ onClose }) => {
     return (
       <div className="editSubredditFormContainer">
         <div className="innerEditSubredditFormContainer">
-          <form className="subredditEditForm" onSubmit={handleSubmit}>
+          <form className="subr-EditForm" onSubmit={handleSubmit}>
             <div className="editSubredditFormTitle">
               <span>Edit Subranddit:</span>
             </div>

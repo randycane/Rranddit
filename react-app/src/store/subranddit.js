@@ -121,7 +121,7 @@ export const getMyOwnSubsThunk = () => async (dispatch) => {
 
 // editing a sub:
 export const editSubThunk = (payload, subrandditId) => async (dispatch) => {
-  const response = await fetch(`/api/subranddits/${subrandditId}/edit`, {
+  const response = await fetch(`/api/subranddits/${subrandditId}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
@@ -129,8 +129,12 @@ export const editSubThunk = (payload, subrandditId) => async (dispatch) => {
   if (response.ok) {
     const updatedSubr = await response.json();
     dispatch(editSubAction(updatedSubr));
+  } else if (response.status < 500) {
+    // error handling
+    return await response.json();
+  } else {
+    return ["An error occurred. Please try again."];
   }
-  return response;
 };
 
 //delete a sub:
