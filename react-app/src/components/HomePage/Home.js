@@ -7,6 +7,8 @@ import { ReadPostsThunk } from "../../store/post";
 import LoginModalComponent from "../LoginModal/Login";
 import PostCardComponent from "../PostCards/PostCard";
 import "./Home.css";
+import github from "./github.png";
+import linkedin from "./linkedin.png";
 
 const HomeComponent = () => {
   const dispatch = useDispatch();
@@ -94,6 +96,7 @@ const HomeComponent = () => {
         </div>
         <div className="row-two">
           <div className="homePageSubrandditInfo">
+            <div className="sandwich-row-two">
             <div className="recs">
               <span>Recommended Communities</span>
             </div>
@@ -121,6 +124,7 @@ const HomeComponent = () => {
                         </div>
                       </div>
                     </div>
+
                   );
                 })}
             </div>
@@ -132,6 +136,8 @@ const HomeComponent = () => {
                 Create a Subranddit
               </div>
             </div>
+            </div>
+
           </div>
           <div className="developerInfoDiv">
             <div className="developerInfoContent">
@@ -142,18 +148,18 @@ const HomeComponent = () => {
                 className="iconContainer"
                 href="https://github.com/randycane/Rranddit"
               >
-                <div className="githubIcon">
-                  <i class="fa-brands fa-github"></i>
-                  <span>Github</span>
+                <div className="github-div">
+                  <img src={github} alt="github-logo"></img>
+                  <div className="dev-text">Github</div>
                 </div>
               </a>
               <a
                 className="iconContainer"
                 href="https://www.linkedin.com/in/randy-y-chang/"
               >
-                <div className="linkedInIcon">
-                  <i class="fab fa-linkedin-in"></i>
-                  <span>LinkedIn</span>
+                <div className="linkedin-div">
+                <img src={linkedin} alt="linkedin-logo"></img>
+                <div className="dev-text">Linkedin</div>
                 </div>
               </a>
             </div>

@@ -12,6 +12,11 @@
     margin-top: 3rem;
   }
 
+  .sandwich-row-two{
+    display: flex;
+    flex-direction: column;
+  }
+
   .outerPostContainer {
     display: flex;
     flex-direction: row;
@@ -155,7 +160,7 @@
     font-weight: 600;
     margin: 3px;
     background-color: #f2f4f5;
-    height: 330px;
+    /* height: 330px; */
     width: 300px;
   }
 
@@ -163,7 +168,7 @@
     display: flex;
     border: 1px solid navy;
     background-color: #f2f4f5;
-    margin-top: 20px;
+    margin-top: 70px;
     height: 150px;
     width: 310px;
   }
@@ -177,11 +182,12 @@
   .homepageSubrandditDescriptionDiv {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
     border: 1px solid maroon;
-    height: 80px;
-    width: 24px;
+    height: 60px;
+    width: 90%;
     padding: 3px;
+    margin: 1px;
   }
 
   .homepageSubrandditDescriptionDiv:hover {
@@ -206,7 +212,7 @@
     border: 1px solid rgb(206, 195, 195);
     background-color: #f2f4f5;
     border-radius: 4px;
-    overflow-y: scroll hidden;
+    /* overflow-y: scroll hidden; */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
@@ -221,13 +227,16 @@
 
   .subrandditCreateDiv {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: flex-end; */
     justify-content: center;
+    margin-top: 22em;
     height: 100px;
   }
 
   .createSubrandditButton {
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-family: verdana, sans-serif;
     font-size: 14px;
@@ -244,4 +253,64 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     background-color: rgb(0, 100, 177);
     cursor: pointer;
+  }
+
+  .developerInfoDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .developerInfoContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  border: 1px solid royalblue;
+  color: white;
+  font-size: 12px;
+  font-family: verdana, sans-serif;
+  background-color: rgb(1, 115, 203);
+  height: 30px;
+  width: 100%;
+  align-items: center;
+  border-radius: 4px;
+  }
+  .github-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .linkedin-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dev-text{
+    padding-left: 9px;
+  }
+
+  .iconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1px;
+    background-color: #f2f4f5;
+    height: 60%;
+    /* margin-bottom: 1px; */
+    margin-top: 1px;
+    text-decoration: none;
+    font-family: verdana, sans-serif;
+    color: black;
+  }
+
+  .iconContainer:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
+    cursor: pointer;
+    border-radius: 2px;
   }
