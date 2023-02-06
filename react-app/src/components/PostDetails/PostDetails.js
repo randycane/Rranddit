@@ -85,10 +85,10 @@ const PostDetailComponent = () => {
     dispatch(deleteCommentThunk(comment));
   };
 
-  const homePage = () => {
-    let path = `/`;
-    history.push(path);
-  };
+  // const homePage = () => {
+  //   let path = `/`;
+  //   history.push(path);
+  // };
 
   return (
     <div className="pageContainer">
@@ -196,9 +196,9 @@ const PostDetailComponent = () => {
             ) : (
               <div className="post-not-found">
                 <h1>Post cannot be found</h1>
-                <div className="go-home" onClick={homePage}>
+                {/* <div className="go-home" onClick={homePage}>
                   <span>Go back to Homepage</span>
-                </div>
+                </div> */}
               </div>
             )
           ) : (

@@ -1,19 +1,48 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, Link } from "react-router-dom";
-import PostDetailComponent from "../PostDetails/PostDetails";
+import { useHistory, Link, NavLink } from "react-router-dom";
+//import PostDetailComponent from "../PostDetails/PostDetails";
 import "./PostCard.css";
 
 const PostCardComponent = ({post}) => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const sessionUser = useSelector((state) => state.session.user);
 
+  const postDetailPage = (postId) => {
+    let path = `/posts/${postId}`;
+    history.push(path);
+  };
+
+  const subrandditPage = (subrandditId) => {
+    let path = `/r/${subrandditId}`;
+    history.push(path);
+  };
+
+  const usersProfilePage = (userId) => {
+    let path = `/user/${userId}`;
+    history.push(path);
+  };
 
     return (
-      <div className="post-top">
+      <div className="post-top" key={post.id}>
         <div className="post-each">
         {/* <Link to={`/posts/${post.id}`}>
                     <PostDetailComponent post={post} />
                   </Link> */}
-          <div className="post-title">{post?.post_title}</div>
+          <div
+            className="postSubrandditName"
+            onClick={(e) => subrandditPage(post.subranddit_id)}
+          >
+            r/{post.subranddit_name}
+          </div>
+          <div
+            className="postUsername"
+            onClick={(e) => usersProfilePage(post.user_id)}
+          >
+            u/{post.username}
+          </div>
+          <NavLink className="post-title" to={`/posts/${post.id}`}>{post?.post_title}</NavLink>
           <div className="post-img">
             <img
               src={post?.img_url}
