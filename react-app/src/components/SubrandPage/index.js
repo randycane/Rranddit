@@ -60,7 +60,7 @@ const SubrandPageComponent = () => {
       });
       setUserMadeSubranddit(sessionUser.id === subrandditInfo[0].owner_id);
     }
-  }, [subrandditLoaded, sessionUser]);
+  }, [subrandditLoaded, sessionUser, subrandditInfo]);
 
   const createPostPage = () => {
     if (!sessionUser) {
@@ -207,7 +207,7 @@ const SubrandPageComponent = () => {
                       <>
                         <div className="sub-information">
                           <div className="about-us">
-                            <span>About Community</span>
+                            <div className="community">About Community</div>
                           </div>
                           <div className="subDescriptionDiv">
                             <div className="subDescription">

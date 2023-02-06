@@ -28,3 +28,33 @@
     color: midnightblue;
     font-weight: 600;
 }
+
+.subrandditBanner{
+  display: flex;
+  flex-direction: column;
+}
+
+.subrandditBanner > img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+.sub-information{
+  border: 1px solid royalblue;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 200px;
+  border-radius: 18px;
+}
+.community{
+  font-weight: 600;
+  font-family: verdana, sans-serif;
+}
+
+.subDescription{
+  font-family: verdana, sans-serif;
+  padding: 2px;
+}
