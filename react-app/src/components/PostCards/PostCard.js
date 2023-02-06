@@ -27,9 +27,6 @@ const PostCardComponent = ({post}) => {
     return (
       <div className="post-top" key={post.id}>
         <div className="post-each">
-        {/* <Link to={`/posts/${post.id}`}>
-                    <PostDetailComponent post={post} />
-                  </Link> */}
           <div
             className="postSubrandditName"
             onClick={(e) => subrandditPage(post.subranddit_id)}
@@ -40,7 +37,7 @@ const PostCardComponent = ({post}) => {
             className="postUsername"
             onClick={(e) => usersProfilePage(post.user_id)}
           >
-            u/{post.username}
+            Posted by u/{post.username}
           </div>
           <NavLink className="post-title" to={`/posts/${post.id}`}>{post?.post_title}</NavLink>
           <div className="post-img">

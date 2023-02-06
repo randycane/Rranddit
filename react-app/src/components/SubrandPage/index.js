@@ -126,7 +126,7 @@ const SubrandPageComponent = () => {
                               {userMadeSubranddit ? (
                                 <div className="sub-button-div">
                                   <button
-                                    className="edit-button"
+                                    className="editing-button"
                                     onClick={() =>
                                       setIsUpdateSubModalIsOpen(true)
                                     }
@@ -138,7 +138,7 @@ const SubrandPageComponent = () => {
                                     modalToggle={setIsUpdateSubModalIsOpen}
                                   />
                                   <button
-                                    className="deletion-button"
+                                    className="delete-button"
                                     onClick={() =>
                                       deleteSubranddit(subranddit.id)
                                     }
