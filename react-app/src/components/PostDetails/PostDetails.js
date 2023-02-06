@@ -32,13 +32,16 @@ const PostDetailComponent = () => {
     Object.values(state?.comments)
   );
 
+  console.log("show me comments", sessionComments)
+
   if (sessionPost && sessionPost.length) {
     subrandditId = sessionPost[0].subranddit_id;
   }
   const [loginFormModalIsOpen, setIsLoginFormModalIsOpen] = useState(false);
+  const [openCommentEditFormId, setOpenCommentEditFormId] = useState(false);
+
   const [subrandditLoaded, setSubrandditLoaded] = useState(false);
   const [postLoaded, setPostLoaded] = useState(false);
-  const [openCommentEditFormId, setOpenCommentEditFormId] = useState(false);
   const [commentsLoaded, setCommentsLoaded] = useState(false);
 
   useEffect(() => {
@@ -134,11 +137,9 @@ const PostDetailComponent = () => {
                         {sessionComments.map((comment) => {
                           return (
                             <>
-                              <div className="commentDiv">
-                                <div className="commenterIconDiv">
-                                  {/* <div className="commenterIcon">
-                                    <img src={comment.user_profile_image}></img>
-                                  </div> */}
+                              <div className="comment-div">
+                                <div className="commenter-div">
+
                                 </div>
                                 <div className="commentContent">
                                   <div className="commentHeader">
@@ -196,9 +197,6 @@ const PostDetailComponent = () => {
             ) : (
               <div className="post-not-found">
                 <h1>Post cannot be found</h1>
-                {/* <div className="go-home" onClick={homePage}>
-                  <span>Go back to Homepage</span>
-                </div> */}
               </div>
             )
           ) : (
