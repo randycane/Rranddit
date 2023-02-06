@@ -147,6 +147,7 @@ const HomeComponent = () => {
               <a
                 className="iconContainer"
                 href="https://github.com/randycane/Rranddit"
+                target="_blank"
               >
                 <div className="github-div">
                   <img src={github} alt="github-logo"></img>
@@ -156,6 +157,7 @@ const HomeComponent = () => {
               <a
                 className="iconContainer"
                 href="https://www.linkedin.com/in/randy-y-chang/"
+                target="_blank"
               >
                 <div className="linkedin-div">
                 <img src={linkedin} alt="linkedin-logo"></img>
