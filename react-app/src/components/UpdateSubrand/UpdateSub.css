@@ -136,7 +136,7 @@
     text-decoration: underline;
   }
 
-  .editSubredditPreviewNote {
+  .edit-preview-notes {
     /* border: 1px solid red; */
     height: 25px;
     width: 90%;
@@ -144,7 +144,7 @@
     margin-top: 10px;
   }
 
-  .editSubredditPreviewNote span {
+  .edit-preview-notes span {
     font-size: 12px;
     font-weight: bold;
   }

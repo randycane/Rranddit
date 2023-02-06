@@ -135,9 +135,9 @@ const UpdateSubrandditComponent = ({ onClose }) => {
               </div>
             </div>
           </div>
-          <div className="editSubredditPreviewNote">
+          <div className="edit-preview-notes">
             <span>
-              *Empty / Broken images will recieve a default icon and banner
+              *Empty or Broken images will recieve a default icon and banner
             </span>
           </div>
         </div>
