@@ -1,279 +1,278 @@
 .homePageDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin: auto;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
 
-  .rowOne {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-  }
+.rowOne {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
 
-  .sandwich-row-two{
-    display: flex;
-    flex-direction: column;
-  }
+.sandwich-row-two {
+  display: flex;
+  flex-direction: column;
+}
 
-  .outerPostContainer {
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-    align-items: flex-start;
-    border: 1px solid rgb(206, 195, 195);
-    margin-bottom: 1.5rem;
-    background-color: rgb(247, 247, 252);
-    border-radius: 4px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  }
+.outerPostContainer {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  align-items: flex-start;
+  border: 1px solid rgb(206, 195, 195);
+  margin-bottom: 1.5rem;
+  background-color: rgb(247, 247, 252);
+  border-radius: 4px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
-  .outerPostContainer:hover {
-    border: 1px solid rgb(64, 59, 59);
-  }
+.outerPostContainer:hover {
+  border: 1px solid rgb(64, 59, 59);
+}
 
-  .createPostDiv {
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-    align-items: center;
-    height: 55px;
-    border: 1px solid rgb(205,205,205);
-    margin-bottom: 1.5rem;
-    background-color: rgb(255,255,255);
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
+.createPostDiv {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  align-items: center;
+  height: 55px;
+  border: 1px solid rgb(205, 205, 205);
+  margin-bottom: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
-  .createIcon {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-  }
+.createIcon {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
 
-  .createIcon>img {
-    border-radius: 50%;
-    height: 38px;
-    width: 45px;
-    background-color: rgba(123, 121, 129, 0.467);
-    margin-left: 10px;
-  }
+.createIcon > img {
+  border-radius: 50%;
+  height: 38px;
+  width: 45px;
+  background-color: rgba(123, 121, 129, 0.467);
+  margin-left: 10px;
+}
 
-  .inputBox {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  }
+.inputBox {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
 
-  .inputBox:hover {
-    border: 1px solid rgb(64, 59, 59);
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-  }
+.inputBox:hover {
+  border: 1px solid rgb(64, 59, 59);
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
 
-  .inputBox:active {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  }
+.inputBox:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
 
-  .createInputContainer>input {
-    display: flex;
-    align-items: center;
-    text-indent: 20px;
-    flex-direction: row;
-    background-color: rgb(246,247,248);
-    border-style: none;
-    border-radius: 4px;
-    width: 500px;
-    height: 38px;
-    align-items: center;
-    margin-left: 20px;
-  }
+.createInputContainer > input {
+  display: flex;
+  align-items: center;
+  text-indent: 20px;
+  flex-direction: row;
+  background-color: rgb(246, 247, 248);
+  border-style: none;
+  border-radius: 4px;
+  width: 500px;
+  height: 38px;
+  align-items: center;
+  margin-left: 20px;
+}
 
+.createPostDiv > input:hover {
+  cursor: text;
+}
 
-  .createPostDiv>input:hover {
-    cursor: text;
-  }
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 85%;
+  padding-left: 20px;
+  background-color: white;
+}
 
+.postTopDescription {
+  display: flex;
+  font-size: 12px;
+  font-family: verdana, sans-serif;
+  color: rgb(43, 40, 40);
+  padding-top: 5px;
+}
 
-  .postContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 85%;
-    padding-left: 20px;
-    background-color: white;
+.postContent {
+  padding-bottom: 1px;
+  word-break: break-all;
+}
 
-  }
+.postUsername {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 
-  .postTopDescription {
-    display: flex;
-    font-size: 12px;
-    font-family: verdana, sans-serif;
-    color: rgb(43, 40, 40);
-    padding-top: 5px;
-  }
+.postTitle {
+  font-size: 18px;
+  font-family: verdana, sans-serif;
+  color: rgb(43, 40, 40);
+  padding-top: 5px;
+  padding-bottom: 20px;
+  width: 80%;
+  word-wrap: break-word;
+}
 
-  .postContent {
-    padding-bottom: 1px;
-    word-break: break-all;
-  }
+.postUsername:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 
-  .postUsername {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+.postImage {
+  width: 100%;
+  height: 100%;
+}
 
-  .postTitle {
-    font-size: 18px;
-    font-family: verdana, sans-serif;
-    color: rgb(43, 40, 40);
-    padding-top: 5px;
-    padding-bottom: 20px;
-    width: 80%;
-    word-wrap: break-word;
-  }
+.row-two {
+  display: flex;
+  width: 310px;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: 20px;
+  margin-right: 10px;
+}
 
-  .postUsername:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
+.recs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: ivory;
+  font-weight: 600;
+  margin: 3px;
+  background-color: royalblue;
+  height: 30px;
+  width: 98%;
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+}
 
-  .postImage {
-    width: 100%;
-    height: 100%;
-  }
+.createSubranddit {
+  display: flex;
+  border: 1px solid navy;
+  background-color: #f2f4f5;
+  margin-top: 10px;
+  height: 150px;
+  width: 310px;
+}
 
+.homepageSubrandditContent {
+  display: flex;
+  flex-direction: column;
+  /* height: 15px; */
+  overflow-y: scroll hidden;
+}
 
-  .row-two {
-    display: flex;
-    width: 310px;
-    flex-direction: column;
-    margin-top: 3rem;
-    margin-left: 20px;
-    margin-right: 10px;
-  }
+.homepageSubrandditDescriptionDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid maroon; */
+  height: 60px;
+  width: 98%;
+  padding: 3px;
+  margin: 1px;
+}
 
-  .recs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: ivory;
-    font-weight: 600;
-    margin: 3px;
-    background-color: royalblue;
-    height: 30px;
-    width: 98%;
-    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
-  }
+.homepageSubrandditDescriptionDiv:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  cursor: pointer;
+}
 
-  .createSubranddit {
-    display: flex;
-    border: 1px solid navy;
-    background-color: #f2f4f5;
-    margin-top: 70px;
-    height: 150px;
-    width: 310px;
-  }
+.subr-img-cover {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
 
-  .homepageSubrandditContent{
-    display: flex;
-    flex-direction: column;
-    height: 50px;
-  }
+.homeSubrandditIcon {
+  display: flex;
+  height: 40px;
+  width: 80px;
+}
 
-  .homepageSubrandditDescriptionDiv {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    /* border: 1px solid maroon; */
-    height: 60px;
-    width: 98%;
-    padding: 3px;
-    margin: 1px;
-  }
+.homepageSubrandditDescription {
+  display: flex;
+  align-content: center;
+  height: 50px;
+}
 
-  .homepageSubrandditDescriptionDiv:hover {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    cursor: pointer;
-  }
+.homePageSubrandditInfo {
+  height: 500px;
+  border: 1px solid rgb(206, 195, 195);
+  background-color: #f2f4f5;
+  border-radius: 4px;
+  overflow-y: scroll hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
-  .subr-img-cover{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-  }
+.home-sub-name {
+  padding-left: 12px;
+  align-self: center;
+  font-size: 17px;
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+}
 
-  .homeSubrandditIcon{
-    display: flex;
-    height: 40px;
-    width: 80px;
-  }
+.subrandditCreateDiv {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  justify-content: center;
+  /* margin-top: 22em; */
+  height: 100px;
+}
 
-  .homepageSubrandditDescription {
-    display: flex;
-    align-content: center;
-    height: 50px;
-  }
+.createSubrandditButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: verdana, sans-serif;
+  font-size: 14px;
+  justify-content: center;
+  border: 1px solid darkblue;
+  border-radius: 9999px;
+  width: 290px;
+  height: 40px;
+  color: #f2f4f5;
+  background-color: rgb(0, 121, 211);
+}
 
-  .homePageSubrandditInfo {
-    height: 500px;
-    border: 1px solid rgb(206, 195, 195);
-    background-color: #f2f4f5;
-    border-radius: 4px;
-    /* overflow-y: scroll hidden; */
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  }
+.createSubrandditButton:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: rgb(0, 100, 177);
+  cursor: pointer;
+}
 
+.developerInfoDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
 
-  .home-sub-name {
-    padding-left: 12px;
-    align-self: center;
-    font-size: 17px;
-    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
-  }
-
-
-  .subrandditCreateDiv {
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-end; */
-    justify-content: center;
-    margin-top: 22em;
-    height: 100px;
-  }
-
-  .createSubrandditButton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: verdana, sans-serif;
-    font-size: 14px;
-    justify-content: center;
-    border: 1px solid darkblue;
-    border-radius: 9999px;
-    width: 290px;
-    height: 40px;
-    color: #f2f4f5;
-    background-color: rgb(0,121,211);
-  }
-
-  .createSubrandditButton:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    background-color: rgb(0, 100, 177);
-    cursor: pointer;
-  }
-
-  .developerInfoDiv{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-  }
-
-  .developerInfoContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.developerInfoContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: 1px solid royalblue;
   color: white;
   font-size: 12px;
@@ -283,43 +282,43 @@
   width: 100%;
   align-items: center;
   border-radius: 4px;
-  }
-  .github-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+}
+.github-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .linkedin-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+.linkedin-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .dev-text{
-    padding-left: 9px;
-  }
+.dev-text {
+  padding-left: 9px;
+}
 
-  .iconContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    padding: 1px;
-    background-color: #f2f4f5;
-    height: 60%;
-    /* margin-bottom: 1px; */
-    margin-top: 1px;
-    text-decoration: none;
-    font-family: verdana, sans-serif;
-    color: black;
-  }
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1px;
+  background-color: #f2f4f5;
+  height: 60%;
+  /* margin-bottom: 1px; */
+  margin-top: 1px;
+  text-decoration: none;
+  font-family: verdana, sans-serif;
+  color: black;
+}
 
-  .iconContainer:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
-    cursor: pointer;
-    border-radius: 2px;
-  }
+.iconContainer:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
+  cursor: pointer;
+  border-radius: 2px;
+}
