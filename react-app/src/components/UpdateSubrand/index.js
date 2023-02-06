@@ -100,9 +100,9 @@ const UpdateSubrandditComponent = ({ onClose }) => {
                 />
               </label>
             </div>
-            <div className="editSubredditButtonDiv">
-              <button className="editSubredditButton" type="submit">
-                Edit Post
+            <div className="editSubrButtonDiv">
+              <button className="editSubrButton" type="submit">
+                Edit Subranddit
               </button>
             </div>
           </form>

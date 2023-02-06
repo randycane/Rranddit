@@ -188,9 +188,9 @@ export const ReadPostBySubrandditIdThunk =
   };
 
 export const SeePostByItsPostIdThunk =
-  (subrandditId, postId) => async (dispatch) => {
+  (postId) => async (dispatch) => {
     const response = await fetch(
-      `/api/subranddits/${subrandditId}/posts/${postId}`
+      `/api/posts/${postId}`
     );
     if (response.ok) {
       const postpage = await response.json();
@@ -293,10 +293,13 @@ const postReducer = (state = initialState, action) => {
       return { ...newState };
     }
     case LOAD_POST_BY_POST: {
-      action.payload.forEach((post) => {
-        newState[post.id] = post;
-      });
-      return { ...newState };
+      newState = { ...state };
+      newState[action.payload.id] = action.payload;
+      return newState;
+      // action.payload.forEach((post) => {
+      //   newState[post.id] = post;
+      // });
+      // return { ...newState };
     }
     case EDIT_POST: {
       newState = { ...state };
