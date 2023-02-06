@@ -5,6 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import LogoutButton from "../auth/LogoutButton";
 import "./NavBar.css";
 
+
 function ProfileButtonComponent({ user }) {
   const dispatch = useDispatch();
   const userIsLoggedIn = useSelector((state) => state.session.user);

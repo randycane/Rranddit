@@ -76,7 +76,6 @@ function NavBarComponent() {
 
   const userIsLoggedIn = useSelector((state) => state?.session?.user)
 
-
   let sessionLinks;
 
   if (userIsLoggedIn) {
