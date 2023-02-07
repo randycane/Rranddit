@@ -49,7 +49,7 @@ const PostCardComponent = ({post}) => {
         </div> */}
 
 
-          {/* <NavLink className="post-title" to={`/posts/${post.id}`}>{post?.post_title}</NavLink> */}
+          <NavLink className="post-title" to={`/posts/${post.post_id}`}>{post?.post_title}</NavLink>
           <div className="post-words">{post?.post_title}</div>
             <div className="post-words">{post?.post_text}</div>
           <div className="post-img">

@@ -47,13 +47,15 @@ const UpdateSubrandditComponent = ({ onClose }) => {
       icon_url: iconUrl,
       banner_img: bannerImage,
     };
-    return dispatch(editSubThunk(newSubrandditData)).then(async (response) => {
-      if (!response.errors) {
-        setSubmitSuccess(true);
-      } else {
-        setErrors(Object.values(response.errors));
-      }
-    });
+    return dispatch(editSubThunk(newSubrandditData))
+    // .then(async (response) => {
+    //   if (!response.errors) {
+    //     setSubmitSuccess(true);
+    //   } else {
+    //     setErrors(Object.values(response.errors));
+    //   }
+    // });
+    .then(setSubmitSuccess(true));
   };
 
   if (subrandditLoaded) {
