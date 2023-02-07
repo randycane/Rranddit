@@ -9,8 +9,8 @@ const PostCardComponent = ({post}) => {
   const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
 
-  const postDetailPage = (postId) => {
-    let path = `/posts/${postId}`;
+  const postDetailPage = (post) => {
+    let path = `/posts/${post.id}`;
     history.push(path);
   };
 
@@ -23,9 +23,10 @@ const PostCardComponent = ({post}) => {
     let path = `/user/${userId}`;
     history.push(path);
   };
-
+  console.log("post number", post.id);
+  // console.log("post targeted", postId);
     return (
-      <div className="post-top" >
+      <div className="post-top" key={post.id}>
         <div className="post-each">
           <div
             className="postSubrandditName"
@@ -39,17 +40,18 @@ const PostCardComponent = ({post}) => {
           >
             Posted by u/{post.username}
           </div>
-          {/* <div className="postTitle" onClick={(e) => postDetailPage(post.id)}>
+          <div className="postTitle" onClick={(e) => postDetailPage(post.id)}>
           <span
             className="postTitleSpan"
             onClick={(e) => postDetailPage(post.id)}
           >
             {post.post_title}
           </span>
-        </div> */}
+        </div>
 
 
-          <NavLink className="post-title" to={`/posts/${post.post_id}`}>{post?.post_title}</NavLink>
+          {/* <NavLink className="post-title" to={`/posts/${post.post_id}`}>{post?.post_title}</NavLink> */}
+
           <div className="post-words">{post?.post_title}</div>
             <div className="post-words">{post?.post_text}</div>
           <div className="post-img">

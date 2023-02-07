@@ -187,6 +187,7 @@ export const ReadPostBySubrandditIdThunk =
     }
   };
 
+// post details thunk:
 export const SeePostByItsPostIdThunk =
   (postId) => async (dispatch) => {
     const response = await fetch(

@@ -42,14 +42,14 @@ function App() {
         <ProtectedRoute path='/' exact={true} >
           <HomeComponent/>
         </ProtectedRoute>
+        <Route path="/posts/:postId" exact={true}>
+          <PostDetailComponent />
+        </Route>
         <Route path='/login' exact={true}>
           <LoginModalComponent isOpen={true} modalToggle={() => {}}/>
         </Route>
         <Route path='/sign-up' exact={true}>
           <SignUpForm />
-        </Route>
-        <Route path="/posts/:postId" exact={true}>
-          <PostDetailComponent />
         </Route>
         <Route path="/r/:subrandditId" exact={true}>
           <SubrandPageComponent />

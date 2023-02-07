@@ -32,12 +32,14 @@ const PostDetailComponent = () => {
     Object.values(state?.comments)
   );
 
+  console.log("show me postsss", sessionPost)
+  console.log("show me csubr", subrandditInfo)
   console.log("show me comments", sessionComments)
 
   if (sessionPost && sessionPost.length) {
     subrandditId = sessionPost[0].subranddit_id;
   }
-  const [loginFormModalIsOpen, setIsLoginFormModalIsOpen] = useState(false);
+  //const [loginFormModalIsOpen, setIsLoginFormModalIsOpen] = useState(false);
   const [openCommentEditFormId, setOpenCommentEditFormId] = useState(false);
 
   const [subrandditLoaded, setSubrandditLoaded] = useState(false);
@@ -66,13 +68,18 @@ const PostDetailComponent = () => {
     history.push(path);
   };
 
+  // const createPostPage = () => {
+  //   if (!sessionUser) {
+  //     setIsLoginFormModalIsOpen(true);
+  //   } else {
+  //     let path = `/submit?subranddit_id=${subrandditId}`;
+  //     history.push(path);
+  //   }
+  // };
+
   const createPostPage = () => {
-    if (!sessionUser) {
-      setIsLoginFormModalIsOpen(true);
-    } else {
       let path = `/submit?subranddit_id=${subrandditId}`;
       history.push(path);
-    }
   };
 
   const editPost = (postId) => {
@@ -94,10 +101,11 @@ const PostDetailComponent = () => {
   // };
 
   return (
+    // <h1> hello</h1>
     <div className="pageContainer">
       <LoginModalComponent
-        isOpen={loginFormModalIsOpen}
-        modalToggle={setIsLoginFormModalIsOpen}
+        // isOpen={loginFormModalIsOpen}
+        // modalToggle={setIsLoginFormModalIsOpen}
       />
       <div className="homePageDiv">
         <div className="rowOne">
@@ -106,7 +114,7 @@ const PostDetailComponent = () => {
               sessionPost.map((post) => {
                 return (
                   <>
-                    {sessionUser && sessionUser.id === post.user_id && (
+                    {sessionUser && sessionUser.id == post.user_id && (
                       <div className="editDeletePostButtonDiv">
                         <button
                           className="editPostButton"
@@ -128,9 +136,9 @@ const PostDetailComponent = () => {
                     )}
                     <PostCardComponent
                       post={post}
-                      modalToggle={setIsLoginFormModalIsOpen}
+                      // modalToggle={setIsLoginFormModalIsOpen}
                     />
-                    {commentsLoaded && (
+                    {/* {commentsLoaded && (
                       <>
                         <div>{sessionComments.length} comments</div>
                         {sessionUser && <WriteACommentComponent post={post} />}
@@ -146,7 +154,7 @@ const PostDetailComponent = () => {
                                     <span>{comment.username}</span>
                                     <div className="commentButtons">
                                       {sessionUser &&
-                                        sessionUser.id === comment.user_id && (
+                                        sessionUser.id == comment.user_id && (
                                           <div>
                                             <button
                                               className="deleteCommentButton"
@@ -166,7 +174,7 @@ const PostDetailComponent = () => {
                                             >
                                               Edit
                                             </button>
-                                            {openCommentEditFormId ===
+                                            {openCommentEditFormId ==
                                               comment.id && (
                                               <UpdateCommentComponent
                                                 comment={comment}
@@ -190,7 +198,7 @@ const PostDetailComponent = () => {
                           );
                         })}
                       </>
-                    )}
+                    )} */}
                   </>
                 );
               })
