@@ -140,7 +140,7 @@ const PostDetailComponent = () => {
                       post={post}
                       // modalToggle={setIsLoginFormModalIsOpen}
                     />
-                    {/* {commentsLoaded && (
+                    {commentsLoaded && (
                       <>
                         <div>{sessionComments.length} comments</div>
                         {sessionUser && <WriteACommentComponent post={post} />}
@@ -200,7 +200,7 @@ const PostDetailComponent = () => {
                           );
                         })}
                       </>
-                    )} */}
+                    )}
                   </>
                 );
               })
