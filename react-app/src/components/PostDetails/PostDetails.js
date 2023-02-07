@@ -207,7 +207,7 @@ const PostDetailComponent = () => {
                 <>
                   <div className="subr-info">
                     <div className="postPage">
-                      <img
+                      <img className="banner-fit"
                         src={subranddit.banner_img}
                         alt="bannerImage"
                         onError={(e) => {
@@ -221,7 +221,7 @@ const PostDetailComponent = () => {
                       onClick={(e) => subrandditPage(subranddit.id)}
                     >
                       <img
-                        className="logo"
+                        className="logo-fit"
                         src={subranddit.icon_url}
                         alt="subrandditIcon"
                         onError={(e) => {
