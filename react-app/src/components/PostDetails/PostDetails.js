@@ -17,7 +17,9 @@ import UpdateCommentComponent from "../UpdateComment/UpdateComment";
 
 const PostDetailComponent = () => {
   let { postId } = useParams();
-  postId = Number(postId);
+  // postId = Number(postId);
+
+  console.log("wjhere is the page", postId)
 
   let subrandditId;
   const dispatch = useDispatch();
@@ -32,9 +34,9 @@ const PostDetailComponent = () => {
     Object.values(state?.comments)
   );
 
-  console.log("show me postsss", sessionPost)
-  console.log("show me csubr", subrandditInfo)
-  console.log("show me comments", sessionComments)
+  console.log("show me postsss", sessionPost);
+  console.log("show me csubr", subrandditInfo);
+  console.log("show me comments", sessionComments);
 
   if (sessionPost && sessionPost.length) {
     subrandditId = sessionPost[0].subranddit_id;
@@ -56,9 +58,9 @@ const PostDetailComponent = () => {
           dispatch(getSubFromIdThunk(subrandditId)).then(() => {
             setSubrandditLoaded(true);
           });
-        dispatch(ReadCommentsByPostThunk(postId)).then(() => {
-          setCommentsLoaded(true);
-        });
+        // dispatch(ReadCommentsByPostThunk(postId)).then(() => {
+        //   setCommentsLoaded(true);
+        // });
       });
     }
   }, [dispatch, subrandditId, postId]);
@@ -78,8 +80,8 @@ const PostDetailComponent = () => {
   // };
 
   const createPostPage = () => {
-      let path = `/submit?subranddit_id=${subrandditId}`;
-      history.push(path);
+    let path = `/submit?subranddit_id=${subrandditId}`;
+    history.push(path);
   };
 
   const editPost = (postId) => {
@@ -95,17 +97,17 @@ const PostDetailComponent = () => {
     dispatch(deleteCommentThunk(comment));
   };
 
-  // const homePage = () => {
-  //   let path = `/`;
-  //   history.push(path);
-  // };
+  const homePage = () => {
+    let path = `/`;
+    history.push(path);
+  };
 
   return (
     // <h1> hello</h1>
     <div className="pageContainer">
       <LoginModalComponent
-        // isOpen={loginFormModalIsOpen}
-        // modalToggle={setIsLoginFormModalIsOpen}
+      // isOpen={loginFormModalIsOpen}
+      // modalToggle={setIsLoginFormModalIsOpen}
       />
       <div className="homePageDiv">
         <div className="rowOne">
@@ -114,7 +116,7 @@ const PostDetailComponent = () => {
               sessionPost.map((post) => {
                 return (
                   <>
-                    {sessionUser && sessionUser.id == post.user_id && (
+                    {sessionUser && sessionUser.id === sessionPost.user_id && (
                       <div className="editDeletePostButtonDiv">
                         <button
                           className="editPostButton"

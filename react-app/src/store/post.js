@@ -198,6 +198,7 @@ export const SeePostByItsPostIdThunk =
       dispatch(readPostByPostAction(postpage));
       return postpage;
     }
+    return response;
   };
 
 // Edit your post hits:
@@ -294,7 +295,7 @@ const postReducer = (state = initialState, action) => {
       return { ...newState };
     }
     case LOAD_POST_BY_POST: {
-      newState = { ...state };
+      newState = {};
       newState[action.payload.id] = action.payload;
       return newState;
       // action.payload.forEach((post) => {

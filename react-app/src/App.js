@@ -39,9 +39,9 @@ function App() {
     <BrowserRouter>
       <NavBarComponent isLoaded={loaded} />
       <Switch>
-        <ProtectedRoute path='/' exact={true} >
+        <Route path='/' exact={true} >
           <HomeComponent/>
-        </ProtectedRoute>
+        </Route>
         <Route path="/posts/:postId" exact={true}>
           <PostDetailComponent />
         </Route>
