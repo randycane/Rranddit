@@ -58,9 +58,9 @@ const PostDetailComponent = () => {
           dispatch(getSubFromIdThunk(subrandditId)).then(() => {
             setSubrandditLoaded(true);
           });
-        // dispatch(ReadCommentsByPostThunk(postId)).then(() => {
-        //   setCommentsLoaded(true);
-        // });
+        dispatch(ReadCommentsByPostThunk(postId)).then(() => {
+          setCommentsLoaded(true);
+        });
       });
     }
   }, [dispatch, subrandditId, postId]);
@@ -70,14 +70,6 @@ const PostDetailComponent = () => {
     history.push(path);
   };
 
-  // const createPostPage = () => {
-  //   if (!sessionUser) {
-  //     setIsLoginFormModalIsOpen(true);
-  //   } else {
-  //     let path = `/submit?subranddit_id=${subrandditId}`;
-  //     history.push(path);
-  //   }
-  // };
 
   const createPostPage = () => {
     let path = `/submit?subranddit_id=${subrandditId}`;
@@ -105,10 +97,6 @@ const PostDetailComponent = () => {
   return (
     // <h1> hello</h1>
     <div className="pageContainer">
-      {/* <LoginModalComponent
-      isOpen={loginFormModalIsOpen}
-      modalToggle={setIsLoginFormModalIsOpen}
-      /> */}
       <div className="homePageDiv">
         <div className="rowOne">
           {postLoaded ? (
@@ -138,7 +126,6 @@ const PostDetailComponent = () => {
                     )}
                     <PostCardComponent
                       post={post}
-                      // modalToggle={setIsLoginFormModalIsOpen}
                     />
                     {commentsLoaded && (
                       <>
