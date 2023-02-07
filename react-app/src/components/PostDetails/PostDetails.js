@@ -105,10 +105,10 @@ const PostDetailComponent = () => {
   return (
     // <h1> hello</h1>
     <div className="pageContainer">
-      <LoginModalComponent
-      // isOpen={loginFormModalIsOpen}
-      // modalToggle={setIsLoginFormModalIsOpen}
-      />
+      {/* <LoginModalComponent
+      isOpen={loginFormModalIsOpen}
+      modalToggle={setIsLoginFormModalIsOpen}
+      /> */}
       <div className="homePageDiv">
         <div className="rowOne">
           {postLoaded ? (

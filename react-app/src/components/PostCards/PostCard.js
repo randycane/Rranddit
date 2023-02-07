@@ -9,8 +9,8 @@ const PostCardComponent = ({post}) => {
   const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
 
-  const postDetailPage = (post) => {
-    let path = `/posts/${post.id}`;
+  const postDetailPage = (postId) => {
+    let path = `/posts/${postId}`;
     history.push(path);
   };
 
