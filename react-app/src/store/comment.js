@@ -51,7 +51,6 @@ export const createCommentThunk = (post) => async (dispatch) => {
     },
     body: JSON.stringify(post),
   });
-
   if (response.ok) {
     const newComm = await response.json();
     dispatch(writeComment(newComm));
