@@ -30,7 +30,7 @@ const SubrandPageComponent = () => {
 
   const sessionUser = useSelector((state) => state.session.user);
 
-  const [updateSubModalIsOpen, setIsUpdateSubModalIsOpen] = useState(false);
+  const [updateSubModalIsOpen, setUpdateSubModalIsOpen] = useState(false);
   const [subrandditLoaded, setSubrandditLoaded] = useState(false);
   const [postsLoaded, setPostsLoaded] = useState(false);
   const [userMadeSubranddit, setUserMadeSubranddit] = useState(false);
@@ -122,12 +122,17 @@ const SubrandPageComponent = () => {
                                 <div className="sub-button-div">
                                   <button
                                     className="editing-button"
-
+                                    onClick={() =>
+                                      setUpdateSubModalIsOpen(true)
+                                    }
                                   >
                                     Edit Sub
                                   </button>
                                   <UpdateSubrandditModal
-
+                                  isOpen={updateSubModalIsOpen}
+                                  modalToggle={
+                                    setUpdateSubModalIsOpen
+                                  }
                                   />
                                   <button
                                     className="delete-button"

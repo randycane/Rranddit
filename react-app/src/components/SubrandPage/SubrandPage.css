@@ -62,3 +62,13 @@
   font-family: verdana, sans-serif;
   padding: 2px;
 }
+
+.editing-button:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0.22, 0.23) 1.95px 1.95px 2.6px;
+}
+
+.delete-button:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0.22, 0.23) 1.95px 1.95px 2.6px;
+}
