@@ -41,12 +41,8 @@ const PostCardComponent = ({post}) => {
             Posted by u/{post.username}
           </div>
           <div className="postTitle" onClick={(e) => postDetailPage(post.id)}>
-          {/* <span
-            className="postTitleSpan"
-            onClick={(e) => postDetailPage(post.id)}
-          > */}
             {post.post_title}
-          {/* </span> */}
+
         </div>
 
             <div className="post-words">{post?.post_text}</div>
