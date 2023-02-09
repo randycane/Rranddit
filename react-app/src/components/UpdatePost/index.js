@@ -48,7 +48,7 @@ const UpdatePostComponent = () => {
       id: postId,
       post_title: title,
       img_url: imageUrl,
-      text: text,
+      post_text: text,
       subranddit_id: subranddit,
     };
 
@@ -87,7 +87,7 @@ const UpdatePostComponent = () => {
                     placeholder="title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    //required
+                    required
                   />
                 </label>
                 <label>

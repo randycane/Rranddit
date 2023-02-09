@@ -202,27 +202,46 @@ export const SeePostByItsPostIdThunk =
   };
 
 // Edit your post hits:
-export const EditPostThunk = (payloadData) => async (dispatch) => {
-  const { id, post_title, post_text, img_url, user_id, subranddit_id } =
-    payloadData;
-  const response = await fetch(`/api/posts/${id}`, {
+// export const EditPostThunk = (payloadData) => async (dispatch) => {
+//   const { id, post_title, post_text, img_url, user_id, subranddit_id } =
+//     payloadData;
+//   const response = await fetch(`/api/posts/${id}`, {
+//     method: "PUT",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({
+//       id,
+//       post_title,
+//       post_text,
+//       img_url,
+//       user_id,
+//       subranddit_id,
+//     }),
+//   });
+//   if (response.ok) {
+//     const editted = await response.json();
+//     dispatch(editPostAction(editted));
+//     return editted;
+//   } else if (response.status < 500) {
+//     return await response.json();
+//   } else {
+//     return ["An error occurred. Please try again."];
+//   }
+// };
+
+//Edit post
+export const EditPostThunk = (data) => async (dispatch) => {
+  const res = await fetch(`/api/posts/${data.id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      id,
-      post_title,
-      post_text,
-      img_url,
-      user_id,
-      subranddit_id,
-    }),
+    body: JSON.stringify(data),
   });
-  if (response.ok) {
-    const editted = await response.json();
-    dispatch(editPostAction(editted));
-    return editted;
-  } else if (response.status < 500) {
-    return await response.json();
+  if (res.ok) {
+    const editedPost = await res.json();
+    dispatch(editPostAction(editedPost));
+    return editedPost;
+  } else if (res.status < 500) {
+    // error handling
+    return await res.json();
   } else {
     return ["An error occurred. Please try again."];
   }

@@ -79,9 +79,9 @@ def edit_post(post_id):
     return {"message": "You must be the owner of this post to edit", "statusCode": 403}
 
   if form.validate_on_submit():
-    edited_post.title = form.data['post_title']
+    edited_post.post_title = form.data['post_title']
     edited_post.img_url = form.data['img_url']
-    edited_post.text = form.data['post_text']
+    edited_post.post_text = form.data['post_text']
 
     db.session.commit()
 
