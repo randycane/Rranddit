@@ -36,25 +36,34 @@ function ProfileButtonComponent({ user }) {
   };
 
   return (
-    <div className="nav-bar-right">
+    <>
       {userIsLoggedIn && (
-        <button className="DropDownMenuIcon" onClick={openMenu}>
-          <i className="fas fa-bars" /> <i className="fas fa-user-circle" />
-        </button>
-      )}
-
-      {showMenu && (
-        <div className="profile-dropdown">
-          <div className="comm">Welcome, {user.username}!</div>
-          <div className="comm">Profile: {user.email}</div>
-          {userIsLoggedIn && (
-            <div className="get-out">
-              <LogoutButton />
+      <div className="profile-right-side" onClick={openMenu}>
+        <div className="profile-below">
+          <div className="menu-profile">
+            <div className="user-icon">
+              <img className="icon-gundam" src="https://gundamnews.org/wp-content/uploads/2022/11/Mobile-Fighter-G-Gundam-04-BDRip-1440x1080p-x265-HEVC-FLACx2-2.0x2Dual-Audiosxales.mkv_20220505_224208.540-1024x768.jpg" alt='default-user'></img>
             </div>
-          )}
+            <div className="myself">{user.username}</div>
+          </div>
         </div>
+        {showMenu && (
+          <div className="menu-shown">
+            <div className="comm"> {`Welcome, ${user.username}!`}</div>
+            <Link
+              className="comm-out"
+              to={`/user/${user.id}`}
+            >
+              Your Profile
+            </Link>
+            <div className="comm-out" onClick={logout}>
+              Log out
+            </div>
+          </div>
+        )}
+      </div>
       )}
-    </div>
+    </>
   );
 }
 

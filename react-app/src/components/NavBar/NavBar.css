@@ -1,117 +1,189 @@
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
-.home{
-    border: 1px solid black;
-    border-radius: 7px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color:whitesmoke;
-    /* padding-left: 12px; */
+.whole-navi {
+  display: flex;
+  flex-direction: row;
 }
 
-.DropDownMenuIcon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: antiquewhite;
-    height: 44px;
-    width: 55px;
-    border-radius: 35px;
-    border: 0.5px solid #e0e0e0;
-    cursor: pointer;
+.navi-container {
+  position: fixed;
+  top: 0px;
+  background-color: whitesmoke;
+  width: 100%;
 }
 
-.profile-dropdown{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    right: 6px;
-    top: 75px;
-    background-color: antiquewhite;
-    border-radius: 5px;
-    align-items: center;
-    height: 150px;
-    width: 200px;
-    padding: 3px;
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500px;
+  height: 60px;
+  border-bottom: 1px solid rgb(177, 161, 161);
 }
 
-.home-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    margin-left: 12px;
-    font-weight: 600;
+.right-navi {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  position: relative;
 }
 
-.get-out{
-    display: flex;
-    border: none;
-    background-color: white;
+.logo-div {
+  width: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
 }
 
-.home-icon{
-    display: flex;
-    flex-direction: row;
-    border: none;
-    border-radius: 30px;
-    height: 40px;
-    width: 40px;
+.profile-div-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 6px;
+  top: 75px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  align-items: center;
+  height: 150px;
+  width: 200px;
+  padding: 3px;
 }
 
-.img-home{
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  object-fit: cover;
 }
 
-.nav-bar-right{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.icon-gundam {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  object-fit: cover;
 }
 
-.top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 1.5px solid black;
-    padding-bottom: 5px;
-    background-color: cornflowerblue;
-    width: 100%;
-    height: 55px;
-    /* top: 0; */
-    position:sticky;
+.menu-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  font-family: verdana, sans-serif;
 }
 
-.comm{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 5px;
+.menu-shown {
+  position: absolute;
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+  top: 60px;
+  right: 20px;
+  width: 150px;
+  height: 110px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+}
+.home-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: darkblue;
+  margin-left: 12px;
+  font-weight: 700;
 }
 
-.page-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 20px;
-    padding-bottom: 15px;
-    color: darkblue;
+.comm-out {
+  display: flex;
+  border: none;
+  background-color: white;
+  width: 100px;
+  padding-left: 2px;
+  border-radius: 6px;
+}
+
+.comm-out:hover {
+  cursor: pointer;
+  box-shadow: rgba(36, 52, 111, 0.27) 1px 1px 0.9em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.home-icon {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 30px;
+  height: 40px;
+  width: 40px;
+}
+
+.img-home {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.nav-bar-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin-right: 1rem;
+  border-radius: 5px;
+  height: 45px;
+  width: 90px;
+  border: 1px solid slategrey;
+}
+.profile-div-dropdown:hover {
+  cursor: pointer;
+}
+
+.profile-below {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logged-in-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 5px;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 15px;
+  color: darkblue;
 }
