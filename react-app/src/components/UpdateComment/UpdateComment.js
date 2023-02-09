@@ -34,7 +34,7 @@ const UpdateCommentComponent = ({ comment, onSuccess }) => {
         <div className="innerEditCommentFormContainer">
           <form className="commentEditForm" onSubmit={handleSubmit}>
             <div>
-              <span>Edit Comment:</span>
+              <div className="edit-below">Edit Comment:</div>
             </div>
             <ul>
               {errors.map((error, idx) => (
@@ -52,15 +52,15 @@ const UpdateCommentComponent = ({ comment, onSuccess }) => {
             </div>
             <div className="editCommentButtonDiv">
               <button
-                className="cancelEditCommentButton"
+                className="cancel-edit"
                 onClick={() => {
                   onSuccess();
                 }}
               >
-                Cancel
+                Cancel Edit
               </button>
               <button className="edit-comm" type="submit">
-                Edit Comment
+                Confirm Edit
               </button>
             </div>
           </form>

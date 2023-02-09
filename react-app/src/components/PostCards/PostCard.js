@@ -23,7 +23,7 @@ const PostCardComponent = ({post}) => {
     let path = `/user/${userId}`;
     history.push(path);
   };
-  console.log("post number", post.id);
+  //console.log("post number", post.id);
   // console.log("post targeted", postId);
     return (
       <div className="post-top" key={post.id}>
@@ -40,7 +40,8 @@ const PostCardComponent = ({post}) => {
           >
             Posted by u/{post.username}
           </div>
-          <div className="postTitle" onClick={(e) => postDetailPage(post.id)}>
+          <div className="undercard" onClick={(e) => postDetailPage(post.id)}>
+          <div className="postTitle">
             {post.post_title}
 
         </div>
@@ -56,8 +57,8 @@ const PostCardComponent = ({post}) => {
               }}
             />
           </div>
-          <div className="undercard">
-        </div>
+
+          </div>
         </div>
         </div>
       );

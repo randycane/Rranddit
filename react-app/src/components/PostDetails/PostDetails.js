@@ -138,22 +138,14 @@ const PostDetailComponent = () => {
                                 <div className="commenter-div">
 
                                 </div>
-                                <div className="commentContent">
+                                <div className="comment-content">
                                   <div className="commentHeader">
-                                    <span> u/{comment.username}</span>
-                                    <div className="commentButtons">
+                                    <div className="commented-by"> commented by u/{comment.username}</div>
+                                    <div className="comment-buttons">
                                       {sessionUser &&
                                         sessionUser.id === comment.user_id && (
-                                          <div>
-                                            <button
-                                              className="deleteCommentButton"
-                                              onClick={() => {
-                                                deleteComment(comment);
-                                              }}
-                                            >
-                                              Delete
-                                            </button>
-                                            <button
+                                        <div>
+                                          <button
                                               className="editCommentButton"
                                               onClick={() => {
                                                 setOpenCommentEditFormId(
@@ -163,6 +155,15 @@ const PostDetailComponent = () => {
                                             >
                                               Edit
                                             </button>
+                                            <button
+                                              className="deleteCommentButton"
+                                              onClick={() => {
+                                                deleteComment(comment);
+                                              }}
+                                            >
+                                              Delete
+                                            </button>
+
                                             {openCommentEditFormId ===
                                               comment.id && (
                                               <UpdateCommentComponent
@@ -193,7 +194,7 @@ const PostDetailComponent = () => {
               })
             ) : (
               <div className="post-not-found">
-                <h1>Post cannot be found</h1>
+                <h1>Post has been deleted or removed.</h1>
               </div>
             )
           ) : (

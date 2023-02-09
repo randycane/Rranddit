@@ -42,3 +42,27 @@
   color: #f2f4f5;
   background-color: rgb(0, 121, 211);
 }
+
+.comment-content{
+  border: 1px solid grey;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.comment-buttons{
+display: flex;
+flex-direction: row;
+padding-left: 15px;
+justify-content: center;
+align-items: center;
+}
+.commented-by{
+  color: rgb(52, 52, 213);
+  font-family: verdana, sans-serif;
+  font-size: 13px;
+}
+.comm-text{
+  color: rgb(126, 121, 121);
+  font-family: verdana, sans-serif;
+}

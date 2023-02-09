@@ -21,6 +21,22 @@
     border-radius: 12px;
     padding: 5px;
     margin: 10px;
+    background-color: rgb(247, 244, 239);
+}
+.undercard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    border-radius: 10px;
+    padding: 2px;
+    width: 80%;
+}
+
+.undercard:hover{
+    cursor: pointer;
+    box-shadow: rgba(20, 20, 77, 0.8) 1px 1px 1px;
 }
 
 .postTitle{
