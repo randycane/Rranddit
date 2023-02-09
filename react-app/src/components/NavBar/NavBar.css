@@ -158,8 +158,14 @@ a {
   border-radius: 10px;
   height: 45px;
   width: 98px;
-  border: 1px solid slategrey;
+  border: 1px solid cornsilk;
 }
+
+.profile-right-side:hover{
+  box-shadow: rgba(0, 0, 0, 0.33) 1.95px 1.95px 2.4px;
+  cursor: pointer;
+}
+
 .profile-div-dropdown:hover {
   cursor: pointer;
 }

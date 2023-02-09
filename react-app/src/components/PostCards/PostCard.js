@@ -4,7 +4,7 @@ import { useHistory, Link, NavLink } from "react-router-dom";
 //import PostDetailComponent from "../PostDetails/PostDetails";
 import "./PostCard.css";
 
-const PostCardComponent = ({post}) => {
+const PostCardComponent = ({ post }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
@@ -25,30 +25,28 @@ const PostCardComponent = ({post}) => {
   };
   //console.log("post number", post.id);
   // console.log("post targeted", postId);
-    return (
-      <div className="post-top" key={post.id}>
-        <div className="post-each">
-          <div
-            className="postSubrandditName"
-            onClick={(e) => subrandditPage(post.subranddit_id)}
-          >
-            r/{post.subranddit_name}
-          </div>
-          <div
-            className="postUsername"
-            onClick={(e) => usersProfilePage(post.user_id)}
-          >
-            Posted by u/{post.username}
-          </div>
-          <div className="undercard" onClick={(e) => postDetailPage(post.id)}>
-          <div className="postTitle">
-            {post.post_title}
-
+  return (
+    <div className="post-top" key={post.id}>
+      <div className="post-each">
+        <div
+          className="postSubrandditName"
+          onClick={(e) => subrandditPage(post.subranddit_id)}
+        >
+          r/{post.subranddit_name}
         </div>
+        <div
+          className="postUsername"
+          onClick={(e) => usersProfilePage(post.user_id)}
+        >
+          Posted by u/{post.username}
+        </div>
+        <div className="undercard" onClick={(e) => postDetailPage(post.id)}>
+          <div className="postTitle">{post.post_title}</div>
 
-            <div className="post-words">{post?.post_text}</div>
+          <div className="post-words">{post?.post_text}</div>
           <div className="post-img">
-            <img className="img-pic"
+            <img
+              className="img-pic"
               src={post?.img_url}
               alt="n/a"
               onError={(e) => {
@@ -57,11 +55,10 @@ const PostCardComponent = ({post}) => {
               }}
             />
           </div>
-
-          </div>
         </div>
-        </div>
-      );
-}
+      </div>
+    </div>
+  );
+};
 
 export default PostCardComponent;

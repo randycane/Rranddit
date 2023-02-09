@@ -17,7 +17,6 @@ const CreatingPostComponent = () => {
 
   const [postTitle, setPostTitle] = useState(null);
   const [imgUrl, setImgUrl] = useState("");
-  const [image, setImage] = useState(null);
   const [text, setText] = useState("");
   const [subranddit, setSubranddit] = useState(subrandditId);
 
@@ -139,8 +138,8 @@ const CreatingPostComponent = () => {
         <ol>
           <li className="rule-list">Remember to be human</li>
           <li className="rule-list">Behave like a moral person</li>
-          <li className="rule-list">Look for the original source of content</li>
-          <li className="rule-list">Report any bugs to the developer</li>
+          <li className="rule-list">Look out for and avoid duplicate posts</li>
+          <li className="rule-list">Report any site issues to the developer</li>
         </ol>
       </div>
     </div>

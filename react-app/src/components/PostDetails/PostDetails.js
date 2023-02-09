@@ -242,7 +242,6 @@ const PostDetailComponent = () => {
                         className="createSubrandditPost"
                         onClick={createPostPage}
                       >
-                        {" "}
                         Create post
                       </div>
                     </div>

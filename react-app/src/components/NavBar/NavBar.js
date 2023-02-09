@@ -39,9 +39,9 @@ const NavBarComponent = ({ isLoaded }) => {
         >
           Log In
         </button>
-        <LoginFormModal
-          isOpen={loginFormModalIsOpen}
-          modalToggle={setLoginFormModalIsOpen}
+        <LoginModalComponent
+          // isOpen={loginFormModalIsOpen}
+          // modalToggle={setLoginFormModalIsOpen}
         />
       </div>
     );

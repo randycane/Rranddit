@@ -102,7 +102,7 @@ const UpdatePostComponent = () => {
                   />
                 </label>
                 <label className="form">
-                  <span> Post image (optional): </span>
+                  <span> Image (optional): </span>
                   <input
                     type="text"
                     value={imageUrl}
