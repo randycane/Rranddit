@@ -12,6 +12,12 @@
   margin-top: 3rem;
 }
 
+.homePageSubrandditInfo{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll hidden;
+}
+
 .sandwich-row-two {
   display: flex;
   flex-direction: column;
@@ -169,7 +175,7 @@
   display: flex;
   border: 1px solid navy;
   background-color: #f2f4f5;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   height: 150px;
   width: 310px;
 }
@@ -177,7 +183,6 @@
 .homepageSubrandditContent {
   display: flex;
   flex-direction: column;
-  /* height: 15px; */
   overflow-y: scroll hidden;
 }
 
@@ -186,7 +191,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* border: 1px solid maroon; */
   height: 60px;
   width: 98%;
   padding: 3px;
@@ -240,7 +244,8 @@
   /* align-items: flex-end; */
   justify-content: center;
   /* margin-top: 22em; */
-  height: 100px;
+  /* height: 100px; */
+  margin-bottom: 10px;
 }
 
 .createSubrandditButton {
@@ -267,7 +272,7 @@
 .developerInfoDiv {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .developerInfoContent {
