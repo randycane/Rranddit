@@ -3,6 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid royalblue; */
+    height: 400px;
+    /* width: 650px; */
     margin-top: 70px;
 }
 
@@ -10,5 +13,39 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
+    padding: 3px;
+}
+
+.welcome-to-randdit{
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+    color: navy;
+    font-weight: 600;
+    font-size: 16pt;
+}
+
+.lelouch{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+    /* border-radius: 50px; */
+}
+
+.geass{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.under-lelouch{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 5px;
 }

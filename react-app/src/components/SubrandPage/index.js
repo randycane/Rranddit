@@ -30,7 +30,6 @@ const SubrandPageComponent = () => {
 
   const sessionUser = useSelector((state) => state.session.user);
 
-  const [loginFormModalIsOpen, setIsLoginFormModalIsOpen] = useState(false);
   const [updateSubModalIsOpen, setIsUpdateSubModalIsOpen] = useState(false);
   const [subrandditLoaded, setSubrandditLoaded] = useState(false);
   const [postsLoaded, setPostsLoaded] = useState(false);
@@ -64,7 +63,8 @@ const SubrandPageComponent = () => {
 
   const createPostPage = () => {
     if (!sessionUser) {
-      setIsLoginFormModalIsOpen(true);
+      let path = `/login`;
+      history.push(path);
     } else {
       let path = `/create-post?subranddit_id=${subrandditId}`;
       history.push(path);
@@ -79,7 +79,8 @@ const SubrandPageComponent = () => {
 
   const joinSubranddit = () => {
     if (!sessionUser) {
-      setIsLoginFormModalIsOpen(true);
+      let path = `/login`;
+      history.push(path);
     } else {
       dispatch(subscribeToSubrandditThunk(subrandditId));
       setUserJoinedSubranddit((userJoinedSubranddit) => !userJoinedSubranddit);
@@ -88,10 +89,6 @@ const SubrandPageComponent = () => {
 
   return (
     <div className="pageContainer">
-      <LoginModalComponent
-        isOpen={loginFormModalIsOpen}
-        modalToggle={setIsLoginFormModalIsOpen}
-      />
       {subrandditLoaded ? (
         <>
           {subrandditInfo[0] ? (
@@ -125,15 +122,12 @@ const SubrandPageComponent = () => {
                                 <div className="sub-button-div">
                                   <button
                                     className="editing-button"
-                                    onClick={() =>
-                                      setIsUpdateSubModalIsOpen(true)
-                                    }
+
                                   >
                                     Edit Sub
                                   </button>
                                   <UpdateSubrandditModal
-                                    isOpen={updateSubModalIsOpen}
-                                    modalToggle={setIsUpdateSubModalIsOpen}
+
                                   />
                                   <button
                                     className="delete-button"
@@ -189,7 +183,7 @@ const SubrandPageComponent = () => {
                         return (
                           <PostCardComponent
                             post={post}
-                            modalToggle={setIsLoginFormModalIsOpen}
+
                           />
                         );
                       })

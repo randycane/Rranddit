@@ -12,7 +12,7 @@ import {
 import WriteACommentComponent from "../CreateComment/CreateComment";
 
 import "./PostDetails.css";
-import LoginModalComponent from "../LoginModal/Login";
+//import LoginModalComponent from "../LoginModal/Login";
 import UpdateCommentComponent from "../UpdateComment/UpdateComment";
 
 const PostDetailComponent = () => {
@@ -34,14 +34,11 @@ const PostDetailComponent = () => {
     Object.values(state?.comments)
   );
 
-  //console.log("show me postsss", sessionPost);
-  //console.log("show me csubr", subrandditInfo);
-  console.log("show me comments", sessionComments);
+  //console.log("show me comments", sessionComments);
 
   if (sessionPost && sessionPost.length) {
     subrandditId = sessionPost.subranddit_id;
   }
-  //const [loginFormModalIsOpen, setIsLoginFormModalIsOpen] = useState(false);
   const [openCommentEditFormId, setOpenCommentEditFormId] = useState(false);
 
   const [subrandditLoaded, setSubrandditLoaded] = useState(false);

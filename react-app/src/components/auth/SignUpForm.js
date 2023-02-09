@@ -46,6 +46,12 @@ const SignUpForm = () => {
 
   return (
     <div className="signing-up-page">
+      <div className="welcome-to-randdit">
+        Welcome to Randdit!
+      </div>
+      <div className="lelouch">
+        <img className="geass" src="https://i.pinimg.com/736x/f6/94/29/f694295bc706250116b2d31a29a75bdc.jpg" alt="neh"></img>
+      </div>
     <form onSubmit={onSignUp}>
       <div>
         {errors.map((error, ind) => (
@@ -90,8 +96,10 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
-      </div>
+        </div>
+        <div className="under-lelouch">
       <button className="loginSignUpButton" type='submit'>Sign Up!</button>
+      </div>
     </form>
 
     </div>

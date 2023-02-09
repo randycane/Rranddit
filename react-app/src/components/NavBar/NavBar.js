@@ -8,16 +8,23 @@ import SignupFormModal from "../auth/SignUpModal";
 import "./NavBar.css";
 import ProfileButtonComponent from "./Profile";
 import LoginModalComponent from "../LoginModal/Login";
+import LoginNewPage from "../LoginModal/Login";
 
 const NavBarComponent = ({ isLoaded }) => {
   const history = useHistory();
   const UserIsLoggedIn = useSelector((state) => state?.session?.user);
-  const [loginFormModalIsOpen, setLoginFormModalIsOpen] = useState(false);
+
 
   const signUpPage = (subrandditId) => {
     let path = `/sign-up`;
     history.push(path);
   };
+
+  const loggingInPage = (subrandditId) => {
+    let path = `/login`;
+    history.push(path);
+  };
+
   let sessionLinks;
   if (UserIsLoggedIn) {
     sessionLinks = (
@@ -34,15 +41,9 @@ const NavBarComponent = ({ isLoaded }) => {
           Sign Up
         </button>
         <button
-          className="logging-in-right"
-          onClick={() => setLoginFormModalIsOpen(true)}
-        >
+          className="logging-in-right" onClick={loggingInPage}>
           Log In
         </button>
-        <LoginModalComponent
-          // isOpen={loginFormModalIsOpen}
-          // modalToggle={setLoginFormModalIsOpen}
-        />
       </div>
     );
   }

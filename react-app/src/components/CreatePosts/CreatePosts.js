@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 
 import { WriteAPostThunk } from "../../store/post";
 import { getAllSubrandditsThunk } from "../../store/subranddit";
@@ -9,8 +9,10 @@ import "./CreatePost.css";
 
 const CreatingPostComponent = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const subranddits = useSelector((state) => Object.values(state?.subranddits));
 
+  //const UserIsLoggedIn = useSelector((state) => state.session.user);
   const urlParams = new URLSearchParams(window.location.search);
   let subrandditId = Number(urlParams.get("subranddit_id"));
   subrandditId = subrandditId > 0 ? subrandditId : 1;
@@ -34,6 +36,7 @@ const CreatingPostComponent = () => {
   if (submitSuccess) {
     return <Redirect to="/" />;
   }
+
 
   const handleSubrandditChange = (e) => {
     setSubranddit(e.target.value);

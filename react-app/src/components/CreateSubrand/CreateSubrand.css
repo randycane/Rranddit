@@ -87,3 +87,7 @@
   color: #f2f4f5;
   background-color: rgb(0, 121, 211);
   }
+
+  .create-button:hover{
+    cursor: pointer;
+  }

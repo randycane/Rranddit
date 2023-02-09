@@ -87,26 +87,6 @@ const MyProfileComponent = () => {
                     sessionPosts.map((post) => {
                       return (
                         <div key={post.id}>
-                          {/* {userOwnsProfile && (
-                            <div className="editDeletePostButtonDiv">
-                              <button
-                                className="editPostButton"
-                                onClick={() => {
-                                  editPost(post.id);
-                                }}
-                              >
-                                Edit
-                              </button>
-                              <button
-                                className="deletePostButton"
-                                onClick={() => {
-                                  deletePost(post.id);
-                                }}
-                              >
-                                Delete
-                              </button>
-                            </div>
-                          )} */}
                           <PostCardComponent
                             post={post}
                             modalToggle={setIsLoginFormModalIsOpen}
@@ -160,7 +140,7 @@ const MyProfileComponent = () => {
                             <span>u/{user.username}</span>
                           ) : (
                             <span>User not found!</span>
-                          )}{" "}
+                          )}
                         </span>
                       </div>
                     </div>

@@ -5,7 +5,7 @@ import { login } from "../../store/session";
 
 import "./Login.css";
 
-const LoginModalComponent = ({ onClose }) => {
+const LoginNewPage = () => {
   const history = useHistory();
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
@@ -13,15 +13,12 @@ const LoginModalComponent = ({ onClose }) => {
   const user = useSelector((state) => state?.session?.user);
   const dispatch = useDispatch();
 
-  const onLogin = async (e, isDemoUser = false) => {
+  const onLogin = async (e) => {
     e.preventDefault();
     const data = await dispatch(login(email, password));
     if (data) {
       setErrors(data);
     }
-    // else {
-    //   onClose();
-    // }
   };
 
   const updateEmail = (e) => {
@@ -42,9 +39,12 @@ const LoginModalComponent = ({ onClose }) => {
   };
 
   return (
-    <div className="login-modal-div">
+    <div className="logging-in-page">
       <div className="login-welcome">
-        <div className="hello-world">Welcome to Randdit</div>
+        <div className="hello-world">Welcome back to Randdit!</div>
+      </div>
+      <div className="lelouch">
+        <img className="geass" src="https://i.pinimg.com/736x/f6/94/29/f694295bc706250116b2d31a29a75bdc.jpg" alt="neh"></img>
       </div>
       <div className="innerLoginFormContainer">
         <form onSubmit={onLogin} className="loginForm">
@@ -80,7 +80,6 @@ const LoginModalComponent = ({ onClose }) => {
               <button className="logging-in" type="submit">
                 Log In
               </button>
-
               <button
                 className="demo-user"
                 type="submit"
@@ -107,4 +106,4 @@ const LoginModalComponent = ({ onClose }) => {
   );
 };
 
-export default LoginModalComponent;
+export default LoginNewPage;

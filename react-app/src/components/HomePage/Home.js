@@ -23,7 +23,6 @@ const HomeComponent = () => {
     return posts;
   });
 
-  const [loginFormModalIsOpen, setIsLoginFormModalIsOpen] = useState(false);
   const [postsLoaded, setPostsLoaded] = useState(false);
   const [subrandditLoaded, setSubrandditLoaded] = useState(false);
 
@@ -38,7 +37,8 @@ const HomeComponent = () => {
 
   const createPostPage = () => {
     if (!sessionUser) {
-      setIsLoginFormModalIsOpen(true);
+      let path = `/login`;
+      history.push(path);
     } else {
       let path = `/create-post`;
       history.push(path);
@@ -47,7 +47,8 @@ const HomeComponent = () => {
 
   const createSubrandditPage = () => {
     if (!sessionUser) {
-      setIsLoginFormModalIsOpen(true);
+      let path = `/login`;
+      history.push(path);
     } else {
       let path = `/create-subranddit`;
       history.push(path);
@@ -61,10 +62,6 @@ const HomeComponent = () => {
 
   return (
     <div className="pageContainer">
-      <LoginFormModal
-        isOpen={loginFormModalIsOpen}
-        modalToggle={setIsLoginFormModalIsOpen}
-      />
       <div className="homePageDiv">
         <div className="rowOne">
           <div className="createPostDiv">
@@ -84,7 +81,6 @@ const HomeComponent = () => {
                   <PostCardComponent
                     key={post.id}
                     post={post}
-                    modalToggle={setIsLoginFormModalIsOpen}
                   />
                 );
               })

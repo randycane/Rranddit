@@ -1,11 +1,46 @@
-.login-modal-div{
+.logging-in-page{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 515px;
+    margin-top: 70px;
+    height: 500px;
     width: 350px;
     padding:12px;
+    margin-left: 38%;
+    /* border: 2px solid royalblue; */
   }
+
+  .login-welcome{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 300px; */
+}
+
+.hello-world{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    color: navy;
+    font-weight: 600;
+    font-size: 16pt;
+}
+
+.lelouch{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+    /* border-radius: 50px; */
+}
+
+.geass{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+}
 
   .login-welcome {
     margin-bottom: 20px;
