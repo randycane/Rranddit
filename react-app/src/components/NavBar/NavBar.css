@@ -82,6 +82,10 @@ a {
   font-family: verdana, sans-serif;
 }
 
+.menu-profile:hover{
+    cursor: pointer;
+}
+
 .menu-shown {
   position: absolute;
   font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
