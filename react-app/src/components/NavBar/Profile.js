@@ -49,7 +49,7 @@ function ProfileButtonComponent({ user }) {
         </div>
         {showMenu && (
           <div className="menu-shown">
-            <div className="comm"> {`Welcome, ${user.username}!`}</div>
+            <div className="comming"> {`Welcome, ${user.username}!`}</div>
             <Link
               className="comm-out"
               to={`/user/${user.id}`}

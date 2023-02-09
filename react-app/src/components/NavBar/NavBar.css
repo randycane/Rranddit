@@ -78,18 +78,23 @@ a {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 120px;
+  border-radius: 10px;
+  height: 45px;
+  width: 190px;
+  padding: 3px;
   font-family: verdana, sans-serif;
 }
 
 .menu-profile:hover{
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.33) 1.95px 1.95px 2.4px;
 }
 
 .menu-shown {
   position: absolute;
   font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
   top: 60px;
+  margin-top: 5px;
   right: 20px;
   width: 150px;
   height: 110px;
@@ -111,11 +116,20 @@ a {
   font-weight: 700;
 }
 
+.comming{
+  display: flex;
+  border: none;
+  background-color: white;
+  width: 140px;
+  padding-left: 2px;
+  border-radius: 6px;
+}
+
 .comm-out {
   display: flex;
   border: none;
   background-color: white;
-  width: 100px;
+  width: 140px;
   padding-left: 2px;
   border-radius: 6px;
 }
@@ -154,21 +168,20 @@ a {
   justify-content: center;
   align-items: center;
   padding: 2px;
-  margin-right: 1rem;
+  margin-right: 3rem;
   border-radius: 10px;
   height: 45px;
-  width: 98px;
+  width: 99px;
   border: 1px solid cornsilk;
 }
 
-.profile-right-side:hover{
-  box-shadow: rgba(0, 0, 0, 0.33) 1.95px 1.95px 2.4px;
+/* .profile-right-side:hover{
   cursor: pointer;
-}
+} */
 
-.profile-div-dropdown:hover {
+/* .profile-div-dropdown:hover {
   cursor: pointer;
-}
+} */
 
 .profile-below {
   display: flex;
