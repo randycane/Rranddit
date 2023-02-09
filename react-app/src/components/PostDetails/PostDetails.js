@@ -17,9 +17,9 @@ import UpdateCommentComponent from "../UpdateComment/UpdateComment";
 
 const PostDetailComponent = () => {
   let { postId } = useParams();
-  // postId = Number(postId);
+  postId = Number(postId);
 
-  console.log("wjhere is the page", postId)
+  // console.log("wjhere is the page", postId)
 
   let subrandditId;
   const dispatch = useDispatch();
@@ -34,12 +34,12 @@ const PostDetailComponent = () => {
     Object.values(state?.comments)
   );
 
-  console.log("show me postsss", sessionPost);
-  console.log("show me csubr", subrandditInfo);
+  //console.log("show me postsss", sessionPost);
+  //console.log("show me csubr", subrandditInfo);
   console.log("show me comments", sessionComments);
 
   if (sessionPost && sessionPost.length) {
-    subrandditId = sessionPost[0].subranddit_id;
+    subrandditId = sessionPost.subranddit_id;
   }
   //const [loginFormModalIsOpen, setIsLoginFormModalIsOpen] = useState(false);
   const [openCommentEditFormId, setOpenCommentEditFormId] = useState(false);

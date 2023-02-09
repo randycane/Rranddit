@@ -41,6 +41,7 @@ export const ReadCommentsByPostThunk = (postId) => async (dispatch) => {
     dispatch(getCommentsByPost(thecomments));
     return thecomments;
   }
+  return response;
 };
 
 export const createCommentThunk = (post) => async (dispatch) => {
@@ -101,9 +102,10 @@ const CommentReducer = (state = initialState, action) => {
       return newState;
     }
     case GET_COMMENTS_BY_POST: {
-      newState = {};
-      newState[action.payload.comments] = action.payload;
-      return newState;
+      action.payload.forEach((comment) => {
+        newState[comment.id] = comment;
+      })
+      return { ...newState };
     }
     case UPDATE_COMMENT: {
       newState = { ...state };
