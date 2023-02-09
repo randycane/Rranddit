@@ -1,1 +1,8 @@
 /* TODO Add site wide styles */
+body {
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+}
+
+html {
+  background-color: rgb(227, 236, 245);
+}

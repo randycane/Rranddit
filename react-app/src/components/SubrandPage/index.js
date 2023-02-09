@@ -121,8 +121,6 @@ const SubrandPageComponent = () => {
                           ></img>
                           <div className="titlediv">
                             <div className="big-div">
-                              <span> {subranddit.title} </span>
-
                               {userMadeSubranddit ? (
                                 <div className="sub-button-div">
                                   <button
@@ -131,7 +129,7 @@ const SubrandPageComponent = () => {
                                       setIsUpdateSubModalIsOpen(true)
                                     }
                                   >
-                                    Edit
+                                    Edit Sub
                                   </button>
                                   <UpdateSubrandditModal
                                     isOpen={updateSubModalIsOpen}
@@ -143,7 +141,7 @@ const SubrandPageComponent = () => {
                                       deleteSubranddit(subranddit.id)
                                     }
                                   >
-                                    Delete
+                                    Delete Sub
                                   </button>
                                 </div>
                               ) : userJoinedSubranddit ? (
@@ -161,7 +159,6 @@ const SubrandPageComponent = () => {
                                   Join
                                 </button>
                               )}
-
                             </div>
                             <div className="underneath">
                               <span>r/{subranddit.title}</span>
@@ -176,8 +173,7 @@ const SubrandPageComponent = () => {
               <div className="homePageDiv">
                 <div className="sub-row">
                   <div className="createPostDiv">
-                    <div className="create">
-                    </div>
+                    <div className="create"></div>
                     <div className="createInputContainer">
                       <input
                         type="text"

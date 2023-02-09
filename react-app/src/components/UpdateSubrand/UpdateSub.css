@@ -79,41 +79,12 @@
     color: white;
   }
 
-  .editSubredditButton:hover {
+  .editSubrButton:hover {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
     background-color: rgb(5, 83, 142);
     cursor: pointer;
   }
 
-  .editSubredditPreview {
-    display: flex;
-    /* border: 1px solid red; */
-    border: 1px solid rgb(209, 199, 199);
-    width: 90%;
-    height: 100px;
-    margin: auto;
-    margin-bottom: 0px;
-  }
-
-  .innerSubredditPreview{
-    width: 100%;
-  }
-
-  .editBannerPreview img {
-    width: 100%;
-    height: 62px;
-    object-fit: cover;
-  }
-
-  .editSubredditIconPreview {
-    /* border: 1px solid red; */
-    position: absolute ;
-    display: flex;
-    width: 20%;
-    height: 10%;
-    margin-left: 12px;
-    top: 13.5rem;
-  }
 
   .editIconBackground{
     border-radius: 50%;
@@ -135,7 +106,7 @@
   }
 
 
-  .outerEditSubredditPreview {
+  .notice{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,7 +119,7 @@
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   }
 
-  .editSubredditPreviewTitle span {
+  .notice-title {
     margin-left: 10px;
     text-decoration: underline;
   }

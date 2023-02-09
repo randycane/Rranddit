@@ -43,8 +43,8 @@ function WriteACommentComponent({ post, onSuccess= null }) {
             ))}
           </ul>
 
-          <span className="commentAsSpan">
-            Comment as u/{" "}
+          <span className="comment-as">
+            Comment as u/
             <a href={`/user/${sessionUser.id}`}>{sessionUser.username}</a>
           </span>
           <label>

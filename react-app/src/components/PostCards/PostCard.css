@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 10px;
@@ -15,8 +15,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border: 2px solid steelblue;
     border-radius: 12px;
     padding: 5px;
@@ -79,20 +79,20 @@
 .editing-button{
     border: 1px solid black;
     border-radius: 5px;
-    color: black;
-    font-weight: 600;
+    color: white;
+    font-weight: 500;
     font-size: 15px;
-    background-color: aqua;
+    background-color: rgb(43, 129, 205);
     margin: 4px;
 }
 
 .delete-button{
     border: 1px solid black;
     border-radius: 5px;
-    color: black;
-    font-weight: 600;
+    color: white;
+    font-weight: 500;
     font-size: 15px;
-    background-color:orange;
+    background-color:rgb(244, 31, 8);
     margin: 4px;
 }
 

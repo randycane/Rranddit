@@ -112,7 +112,7 @@ const PostDetailComponent = () => {
                             editPost(post.id);
                           }}
                         >
-                          Edit
+                          Edit Post
                         </button>
                         <button
                           className="deletePostButton"
@@ -120,7 +120,7 @@ const PostDetailComponent = () => {
                             deletePost(post.id);
                           }}
                         >
-                          Delete
+                          Delete Post
                         </button>
                       </div>
                     )}

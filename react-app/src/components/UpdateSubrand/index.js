@@ -104,38 +104,14 @@ const UpdateSubrandditComponent = ({ onClose }) => {
             </div>
             <div className="editSubrButtonDiv">
               <button className="editSubrButton" type="submit">
-                Edit Subranddit
+                Confirm Edit
               </button>
             </div>
           </form>
         </div>
-        <div className="outerEditSubredditPreview">
-          <div className="editSubredditPreviewTitle">
-            <span>Live Edit Preview:</span>
-          </div>
-          <div className="editSubredditPreview">
-            <div className="innerSubredditPreview">
-              <div className="editBannerPreview">
-                <img
-                  src={bannerImage}
-                  alt="bannerImage"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://i.imgur.com/aQxmKOg.png";
-                  }}
-                ></img>
-              </div>
-              <div className="editSubredditIconPreview">
-                <div className="editIconBackground">
-                  <img
-                    src={iconUrl}
-                    alt="iconImage"
-                    onError={(e) => {
-                      e.currentTarget.src = "https://i.imgur.com/hkMSod3.png";
-                    }}
-                  ></img>
-                </div>
-              </div>
-            </div>
+        <div className="notice">
+          <div className="notice-title">
+            <span>For your information:</span>
           </div>
           <div className="edit-preview-notes">
             <span>
