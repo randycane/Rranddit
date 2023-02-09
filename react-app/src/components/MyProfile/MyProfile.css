@@ -1,11 +1,11 @@
-.homePageDiv{
+.homePageDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
 }
 
-.written-by-you{
+.written-by-you {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,60 +15,60 @@
   color: rgb(23, 23, 171);
 }
 .userProfileInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #f2f4f5;
-    height: 320px;
-    width: 320px;
-    margin-top: 1rem;
-    border-radius: 4px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f2f4f5;
+  height: 320px;
+  width: 320px;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
 
-  .userProfileBanner {
-    height: 95px;
-    background-color: rgb(9, 105, 179);
-    border-radius: 4px;
-  }
+.userProfileBanner {
+  height: 95px;
+  background-color: rgb(9, 105, 179);
+  border-radius: 4px;
+}
 
-  .innerProfileInfo-div {
-    display: flex;
-    flex-direction: column-reverse;
-    height: 100%;
-    width: 100%;
-  }
-  .profile-default-icon{
-    height: 100px;
-    width: 100px;
-    top: 8rem;
-    margin-left: 20px;
-    background-color:  #f2f4f5;
-    position: absolute;
-    border-radius: 9999px;
-  }
+.innerProfileInfo-div {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  width: 100%;
+}
+.profile-default-icon {
+  height: 100px;
+  width: 100px;
+  top: 8rem;
+  margin-left: 20px;
+  background-color: #f2f4f5;
+  position: absolute;
+  border-radius: 9999px;
+}
 
-  .profile-default-icon > span {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    margin-left: 5px;
-  }
-  .default-pic {
-    width: 100px;
+.profile-default-icon > span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  margin-left: 5px;
+}
+.default-pic {
+  width: 100px;
   height: 100px;
   border-radius: 9999px;
   object-fit: cover;
-  }
+}
 
-  .editDeletePostButtonDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    margin-bottom: -10px;
-  }
+.editDeletePostButtonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: -10px;
+}
 
-  .editPostButton{
-    font-size: 14px;
+.editPostButton {
+  font-size: 14px;
   justify-content: center;
   border: 1px solid darkblue;
   border-radius: 9999px;
@@ -77,96 +77,97 @@
   color: #f2f4f5;
   background-color: rgb(0, 121, 211);
   margin-right: 5px;
-  }
+}
 
-  .deletePostButton{
-    font-size: 14px;
-    justify-content: center;
-    border: 1px solid darkblue;
-    border-radius: 9999px;
-    width: 70px;
-    height: 30px;
-    color: #f2f4f5;
-    background-color: rgb(227, 90, 32);
-  }
+.deletePostButton {
+  font-size: 14px;
+  justify-content: center;
+  border: 1px solid darkblue;
+  border-radius: 9999px;
+  width: 70px;
+  height: 30px;
+  color: #f2f4f5;
+  background-color: rgb(227, 90, 32);
+}
 
-  .profileCreatePostDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.profileCreatePostDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #f2f4f5;
   margin-top: 10px;
   height: 150px;
   width: 320px;
-  }
-  .createSubrandditPost{
-    display: flex;
+}
+.createSubrandditPost {
+  display: flex;
   border: 1px solid navy;
   background-color: #f2f4f5;
   margin-top: 10px;
   height: 150px;
   width: 310px;
-  }
+}
 
-  .followedSubrandditContent {
-    overflow-y: scroll;
-    height: 250px;
-  }
+.followedSubrandditContent {
+  overflow-y: scroll;
+  height: 250px;
+}
 
-  .followedSubrandditDescriptionDiv {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    height: 40px;
-    width: 288=7px;
-    padding: 12px;
-  }
+.followedSubrandditDescriptionDiv {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  height: 40px;
+  width: 288=7px;
+  padding: 12px;
+}
 
-  .followedSubrandditDescriptionDiv:hover {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    cursor: pointer;
-  }
+.followedSubrandditDescriptionDiv:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  cursor: pointer;
+}
 
-  .followed-subr {
-    height: 320px;
-    width: 320px;
-    justify-content: space-evenly;
-    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
-    border: 1px solid rgb(206, 195, 195);
-    background-color: #f2f4f5;
-    border-radius: 4px;
-    overflow-y: scroll hidden;
-    margin-top: 2rem;
-    box-shadow: rgba(116, 112, 112, 0.2) 0px 2px 8px 0px;
-  }
-  .followedSubrandditDescription {
-    display: flex;
-    align-content: center;
-    height: 50px;
-    justify-content: space-evenly;
-  }
+.followed-subr {
+  height: 320px;
+  width: 320px;
+  justify-content: space-evenly;
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+  border: 1px solid rgb(206, 195, 195);
+  background-color: #f2f4f5;
+  border-radius: 4px;
+  overflow-y: scroll hidden;
+  margin-top: 2rem;
+  box-shadow: rgba(116, 112, 112, 0.2) 0px 2px 8px 0px;
+}
+.followedSubrandditDescription {
+  display: flex;
+  align-content: center;
+  height: 50px;
+  justify-content: space-evenly;
+}
 
-  .about-followed{
-    display: flex;
+.about-followed {
+  display: flex;
   align-content: center;
   height: 50px;
   width: 100%;
-  background-color: rgb(0,121,211);
+  background-color: rgb(0, 121, 211);
   border-radius: 2px;
-  }
+}
 
-  .about-followed> span {
-    align-self: center;
-    padding-left: 15px;
-    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
-    font-weight: 500;
-    color: #f2f4f5;
-  }
+.about-followed > span {
+  align-self: center;
+  padding-left: 15px;
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+  font-weight: 500;
+  color: #f2f4f5;
+}
 
-  .following-icons{
-    width: 50px;
+.following-icons {
+  width: 50px;
   height: 50px;
   border-radius: 9999px;
   object-fit: cover;
-  }
+}

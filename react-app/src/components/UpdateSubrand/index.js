@@ -60,10 +60,10 @@ const UpdateSubrandditComponent = ({ onClose }) => {
 
   if (subrandditLoaded) {
     return (
-      <div className="editSubredditFormContainer">
-        <div className="innerEditSubredditFormContainer">
+      <div className="editSubrandditFormContainer">
+        <div className="innerEditSubrandditFormContainer">
           <form className="subr-EditForm" onSubmit={handleSubmit}>
-            <div className="editSubredditFormTitle">
+            <div className="editSubrandditFormTitle">
               <span>Edit Subranddit:</span>
             </div>
             <ul>

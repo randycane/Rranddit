@@ -15,24 +15,24 @@
   cursor: pointer;
 }
 
-.editSubredditFormContainer {
+.editSubrandditFormContainer {
     display: flex;
     flex-direction: row;
     width: 600px;
     height: 450px;
   }
 
-  .editSubredditFormTitle {
+  .editSubrandditFormTitle {
     /* border: 1px solid red; */
     /* margin: auto; */
     margin-left: 25px;
   }
 
-  .editSubredditFormTitle span {
+  .editSubrandditFormTitle span {
     font-size: 20px;
   }
 
-  .innerEditSubredditFormContainer {
+  .innerEditSubrandditFormContainer {
     /* border: 1px solid red; */
     margin: auto;
     width: 90%;
