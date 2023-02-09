@@ -1,3 +1,7 @@
+.rowOne{
+  margin-top: 65px;
+}
+
 .go-home {
   display: flex;
   justify-content: center;

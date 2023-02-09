@@ -191,3 +191,42 @@ a {
   padding: 15px;
   color: darkblue;
 }
+
+.logging-in-right{
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 120px;
+    height: 23px;
+    border-radius: 9999px;
+    border-style:none ;
+    color: white;
+    margin-left: 10px;
+    margin-right: 12px;
+    background-color: royalblue;
+}
+
+.signing-up-right{
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 120px;
+    height: 23px;
+    border-radius: 9999px;
+    border: 1px solid royalblue;
+    color: darkblue;
+    margin-left: 10px;
+    margin-right: 12px;
+    background-color: white;
+}
+
+.logging-in-right:hover{
+  box-shadow: rgba(31, 30, 30, 0.15) 1.95px 1.95px 2.4px;;
+    background-color: rgb(14, 74, 120);
+  cursor: pointer;
+}
+
+.signing-up-right:hover{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.4px;
+  cursor: pointer;
+}

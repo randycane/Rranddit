@@ -11,21 +11,39 @@ import LoginModalComponent from "../LoginModal/Login";
 
 const NavBarComponent = ({ isLoaded }) => {
   const history = useHistory();
-  const sessionUser = useSelector((state) => state?.session?.user);
-  //const [loginFormModalIsOpen, setLoginFormModalIsOpen] = useState(false);
+  const UserIsLoggedIn = useSelector((state) => state?.session?.user);
+  const [loginFormModalIsOpen, setLoginFormModalIsOpen] = useState(false);
 
   const signUpPage = (subrandditId) => {
     let path = `/sign-up`;
     history.push(path);
   };
   let sessionLinks;
-  if (sessionUser) {
+  if (UserIsLoggedIn) {
     sessionLinks = (
       <>
-        <div className="right-navi">
-          <ProfileButtonComponent user={sessionUser} />
+        <div className="profile-button">
+          <ProfileButtonComponent user={UserIsLoggedIn} />
         </div>
       </>
+    );
+  } else {
+    sessionLinks = (
+      <div className="navigating-bar">
+        <button className="signing-up-right" onClick={signUpPage}>
+          Sign Up
+        </button>
+        <button
+          className="logging-in-right"
+          onClick={() => setLoginFormModalIsOpen(true)}
+        >
+          Log In
+        </button>
+        <LoginFormModal
+          isOpen={loginFormModalIsOpen}
+          modalToggle={setLoginFormModalIsOpen}
+        />
+      </div>
     );
   }
 

@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
 
+import "./auth.css";
+
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
   const [username, setUsername] = useState('');
@@ -43,14 +45,16 @@ const SignUpForm = () => {
   }
 
   return (
+    <div className="signing-up-page">
     <form onSubmit={onSignUp}>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
-      </div>
+        </div>
+        <div className="reaching-fields">
       <div>
-        <label>User Name</label>
+        <label>Username</label>
         <input
           type='text'
           name='username'
@@ -86,8 +90,11 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
-      <button type='submit'>Sign Up</button>
+      </div>
+      <button className="loginSignUpButton" type='submit'>Sign Up!</button>
     </form>
+
+    </div>
   );
 };
 

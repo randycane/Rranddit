@@ -6,3 +6,18 @@ body {
 html {
   background-color: rgb(227, 236, 245);
 }
+
+input {
+  border: 0.4;
+  padding: 5px;
+  cursor: text;
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+  border-radius: 5px;
+  border-bottom: 1px solid #ccc;
+  margin: 2px;
+}
+
+input:focus {
+  border-bottom: 1px solid #666;
+  outline: 0;
+}

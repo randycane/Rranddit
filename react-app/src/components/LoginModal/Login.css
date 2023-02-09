@@ -1,0 +1,137 @@
+.login-modal-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 515px;
+    width: 350px;
+    padding:12px;
+  }
+
+  .login-welcome {
+    margin-bottom: 20px;
+  }
+
+  .login-welcome > span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+  }
+
+  .innerLoginFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    padding: 12px;
+    margin: auto;
+  }
+
+  .email-field-div {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 12px;
+  }
+
+  .password-div {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 12px;
+  }
+
+
+.loginButtonsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55%;
+  }
+
+.loginDemoButtons {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .loginDemoButtons > button {
+    height: 100%;
+    width: 40%;
+  }
+
+  .need-accounts {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top: 10px;
+    align-items: center;
+    margin: auto;
+  }
+
+  .to-register{
+      color: darkblue;
+      font-weight: 500;
+  }
+
+  .logging-in {
+    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 120px;
+    height: 33px;
+    border-radius: 9999px;
+    border-style:none ;
+    color: white;
+    margin-left: 10px;
+    margin-right: 12px;
+    background-color: royalblue;
+  }
+
+.logging-in:hover{
+    box-shadow: rgba(31, 30, 30, 0.15) 1.95px 1.95px 2.6px;;
+    background-color: rgb(14, 74, 120);
+    cursor: pointer;
+}
+
+  .demo-user {
+    font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 120px;
+    height: 33px;
+    border-radius: 9999px;
+    border-style:none ;
+    color: white;
+    margin-left: 10px;
+    margin-right: 12px;
+    background-color:royalblue;
+  }
+
+  .demo-user:hover{
+    box-shadow: rgba(31, 30, 30, 0.15) 1.95px 1.95px 2.6px;;
+    background-color: rgb(14, 74, 120);
+    cursor: pointer;
+  }
+
+
+.loginSignUpButton {
+    margin-top: 5px;
+    width: 80px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .loginSignUpButton{
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  }
+
+  .loginSignUpButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: rgb(5, 83, 142);
+    cursor: pointer;
+  }
