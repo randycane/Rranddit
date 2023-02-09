@@ -5,6 +5,15 @@
   align-items: flex-start;
 }
 
+.written-by-you{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(23, 23, 171);
+}
 .userProfileInfo {
     display: flex;
     flex-direction: column;

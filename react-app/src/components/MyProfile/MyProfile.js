@@ -81,12 +81,13 @@ const MyProfileComponent = () => {
           {sessionPosts.length || user ? (
             <div className="homePageDiv">
               <div className="rowOne">
+              <div className="written-by-you"> Your posts </div>
                 {postsLoaded ? (
                   sessionPosts.length ? (
                     sessionPosts.map((post) => {
                       return (
                         <div key={post.id}>
-                          {userOwnsProfile && (
+                          {/* {userOwnsProfile && (
                             <div className="editDeletePostButtonDiv">
                               <button
                                 className="editPostButton"
@@ -105,7 +106,7 @@ const MyProfileComponent = () => {
                                 Delete
                               </button>
                             </div>
-                          )}
+                          )} */}
                           <PostCardComponent
                             post={post}
                             modalToggle={setIsLoginFormModalIsOpen}

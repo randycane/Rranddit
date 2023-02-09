@@ -143,7 +143,7 @@ const PostDetailComponent = () => {
                                     <span> u/{comment.username}</span>
                                     <div className="commentButtons">
                                       {sessionUser &&
-                                        sessionUser.id == comment.user_id && (
+                                        sessionUser.id === comment.user_id && (
                                           <div>
                                             <button
                                               className="deleteCommentButton"
@@ -163,7 +163,7 @@ const PostDetailComponent = () => {
                                             >
                                               Edit
                                             </button>
-                                            {openCommentEditFormId ==
+                                            {openCommentEditFormId ===
                                               comment.id && (
                                               <UpdateCommentComponent
                                                 comment={comment}
