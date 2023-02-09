@@ -104,7 +104,7 @@ const PostDetailComponent = () => {
               sessionPost.map((post) => {
                 return (
                   <>
-                    {sessionUser && sessionUser.id === sessionPost.user_id && (
+                    {sessionUser && sessionUser.id === post.user_id && (
                       <div className="editDeletePostButtonDiv">
                         <button
                           className="editPostButton"
@@ -140,7 +140,7 @@ const PostDetailComponent = () => {
                                 </div>
                                 <div className="commentContent">
                                   <div className="commentHeader">
-                                    <span>{comment.username}</span>
+                                    <span> u/{comment.username}</span>
                                     <div className="commentButtons">
                                       {sessionUser &&
                                         sessionUser.id == comment.user_id && (

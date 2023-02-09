@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 import { createCommentThunk } from "../../store/comment";
 import "./CreateComment.css";
 
-function WriteACommentComponent({ post }) {
+function WriteACommentComponent({ post, onSuccess= null }) {
   const dispatch = useDispatch();
   const [text, setText] = useState("");
   const [errors, setErrors] = useState([]);
@@ -19,10 +19,12 @@ function WriteACommentComponent({ post }) {
       post_id: post.id,
     };
 
-    return dispatch(createCommentThunk(newComment)).then(async (response) => {
+    return dispatch(createCommentThunk(newComment))
+      .then(async (response) => {
       if (!response.errors) {
         setSubmitSuccess(true);
         setText("");
+        onSuccess && onSuccess();
       } else {
         setErrors(Object.values(response.errors));
       }

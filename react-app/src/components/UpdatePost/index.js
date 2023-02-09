@@ -7,6 +7,7 @@ import "./UpdatePost.css";
 
 const UpdatePostComponent = () => {
   let { postId } = useParams();
+  postId = Number(postId);
 
   const dispatch = useDispatch();
   let thispost = useSelector((state) => Object.values(state?.posts));
@@ -45,7 +46,7 @@ const UpdatePostComponent = () => {
     setErrors([]);
     let newPostData = {
       id: postId,
-      title: title,
+      post_title: title,
       img_url: imageUrl,
       text: text,
       subranddit_id: subranddit,
@@ -54,7 +55,8 @@ const UpdatePostComponent = () => {
     return dispatch(EditPostThunk(newPostData)).then(async (response) => {
       if (!response.errors) {
         setSubmitSuccess(true);
-      } else {
+      }
+      else {
         setErrors(Object.values(response.errors));
       }
     });
@@ -85,7 +87,7 @@ const UpdatePostComponent = () => {
                     placeholder="title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    required
+                    //required
                   />
                 </label>
                 <label>

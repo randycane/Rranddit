@@ -44,13 +44,13 @@ export const ReadCommentsByPostThunk = (postId) => async (dispatch) => {
   return response;
 };
 
-export const createCommentThunk = (post) => async (dispatch) => {
-  const response = await fetch(`/api/posts/${post.id}/comments/new`, {
+export const createCommentThunk = (payload) => async (dispatch) => {
+  const response = await fetch(`/api/posts/${payload.post_id}/comments/new`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(post),
+    body: JSON.stringify(payload),
   });
   if (response.ok) {
     const newComm = await response.json();
@@ -63,8 +63,8 @@ export const createCommentThunk = (post) => async (dispatch) => {
   }
 };
 
-export const editCommentThunk = (payload, postId) => async (dispatch) => {
-  const response = await fetch(`/api/posts/${postId}/edit`, {
+export const editCommentThunk = (payload) => async (dispatch) => {
+  const response = await fetch(`/api/comments/${payload.id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
