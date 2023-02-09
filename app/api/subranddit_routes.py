@@ -103,3 +103,34 @@ def delete_subranddit(subranddit_id):
     return {'message': 'Subranddit successfully deleted'}
   else:
     return {'message': 'Only subranddit owner can delete subranddit', 'statusCode': 403}
+
+# Subscribing to a subranddit
+@subranddit_routes.route("/<int:subranddit_id>/subscribe", methods=["POST"])
+@login_required
+def subscribe_to_subreddit(subreddit_id):
+  subranddit = Subranddit.query.get_or_404(subranddit_id)
+  if not subranddit:
+    return {"message": "Subranddit does not exist"}
+  subscription = Subscription.query.filter(Subscription.subranddit_id == subranddit_id, Subscription.user_id == current_user.id).first()
+  if not subscription:
+    new_subscription = Subscription(
+      user_id = current_user.id,
+      subranddit_id = subranddit_id
+    )
+    message = "Subscribed successfully"
+    db.session.add(new_subscription)
+  else:
+    message = "Unsubscribed successfully"
+    subranddit.subscriptions.remove(subscription)
+
+  db.session.commit()
+  return {"message": message}
+
+# Get all subranddits the logged in user is subscribed to
+@subranddit_routes.route('/subscriptions')
+@login_required
+def get_users_subranddits():
+    subscriptions = current_user.subscription
+    subranddits = [subscription.subranddit.to_dict() for subscription in subscriptions]
+
+    return jsonify(subranddits)

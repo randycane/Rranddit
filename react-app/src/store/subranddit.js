@@ -151,14 +151,14 @@ export const deleteSubThunk = (id) => async (dispatch) => {
 // Subscribing to a subranddit:
 export const subscribeToSubrandditThunk =
   (subrandditId) => async (dispatch) => {
-    const res = await fetch(`/api/subranddits/${subrandditId}/subscribe`, {
+    const response = await fetch(`/api/subranddits/${subrandditId}/subscribe`, {
       method: "POST",
     });
-    if (res.ok) {
+    if (response.ok) {
       dispatch(subscribeToSubAction(subrandditId));
       return subrandditId;
     }
-    return res;
+    return response;
   };
 
 
