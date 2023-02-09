@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 20px;
@@ -15,18 +15,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
-    border: 1px solid red;
+    width: 400px;
+    height: 400px;
+    border: 2px solid steelblue;
     border-radius: 12px;
     padding: 5px;
     margin: 10px;
 }
 
-.post-title{
+.postTitle{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-weight: 600;
+}
+
+.postTitle:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .post-img{

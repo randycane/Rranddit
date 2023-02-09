@@ -126,11 +126,11 @@ const MyProfileComponent = () => {
                 {user ? (
                   <div className="userProfileInfo">
                     <div className="userProfileBanner"></div>
-                    <div className="innerProfileInfoDiv">
+                    <div className="innerProfileInfo-div">
                       {userOwnsProfile && (
                         <div className="profileCreatePostDiv">
                           <div
-                            className="createSubredditPost"
+                            className="createSubrandditPost"
                             onClick={createPostPage}
                           >
                             {" "}
@@ -138,26 +138,26 @@ const MyProfileComponent = () => {
                           </div>
                         </div>
                       )}
-                      <div className="profileInfodDiv">
+                      <div className="profile-default-icon">
                         {user.profile_image ? (
-                          <img
+                          <img className="default-pic"
                             src={user.profile_image}
-                            alt="users pic"
+                            alt="user-pic"
                             onError={(e) => {
                               e.currentTarget.src =
-                                "https://i.imgur.com/n1eSrjP.jpg";
+                                "https://gundamnews.org/wp-content/uploads/2022/11/Mobile-Fighter-G-Gundam-04-BDRip-1440x1080p-x265-HEVC-FLACx2-2.0x2Dual-Audiosxales.mkv_20220505_224208.540-1024x768.jpg";
                             }}
                           ></img>
                         ) : (
-                          <img
-                            src="https://i.imgur.com/n1eSrjP.jpg"
-                            alt="Error Pic"
+                          <img className="default-pic"
+                            src="https://gundamnews.org/wp-content/uploads/2022/11/Mobile-Fighter-G-Gundam-04-BDRip-1440x1080p-x265-HEVC-FLACx2-2.0x2Dual-Audiosxales.mkv_20220505_224208.540-1024x768.jpg"
+                            alt="defaultPic"
                           ></img>
                         )}
                         <span>
                           {" "}
                           {user.username ? (
-                            <span>r/{user.username}</span>
+                            <span>u/{user.username}</span>
                           ) : (
                             <span>User not found!</span>
                           )}{" "}
@@ -176,18 +176,18 @@ const MyProfileComponent = () => {
                     <div className="about-followed">
                       <span>Followed Subranddits</span>
                     </div>
-                    <div className="followedSubredditContent">
+                    <div className="followedSubrandditContent">
                       {userSubrandditsLoaded &&
                         sessionSubranddits.map((subranddit) => {
                           return (
                             <div key={subranddit.id}>
                               <div
-                                className="followedSubredditDescriptionDiv"
+                                className="followedSubrandditDescriptionDiv"
                                 onClick={(e) => subrandditsPage(subranddit.id)}
                               >
-                                <div className="followedSubredditDescription">
-                                  <div className="homeSubredditIcon">
-                                    <img
+                                <div className="followedSubrandditDescription">
+                                  <div className="homeSubrandditIcon">
+                                    <img className="following-icons"
                                       src={subranddit.icon_url}
                                       alt="subrandditIcon"
                                       onError={(e) => {
