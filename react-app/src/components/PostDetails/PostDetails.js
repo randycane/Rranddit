@@ -86,7 +86,7 @@ const PostDetailComponent = () => {
   };
 
   const deleteComment = (comment) => {
-    dispatch(deleteCommentThunk(comment));
+    dispatch(deleteCommentThunk(comment.id));
   };
 
   const homePage = () => {

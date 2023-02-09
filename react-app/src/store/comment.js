@@ -45,7 +45,7 @@ export const ReadCommentsByPostThunk = (postId) => async (dispatch) => {
 };
 
 export const createCommentThunk = (payload) => async (dispatch) => {
-  const response = await fetch(`/api/posts/${payload.post_id}/comments/new`, {
+  const response = await fetch(`/api/posts/${payload.post_id}/comments/create`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -81,13 +81,14 @@ export const editCommentThunk = (payload) => async (dispatch) => {
 };
 
 export const deleteCommentThunk = (id) => async (dispatch) => {
-  const response = await fetch(`/api/comments/${id}/delete`, {
+  const response = await fetch(`/api/comments/${id}`, {
     method: "DELETE",
   });
 
   if (response.ok) {
     dispatch(deleteComment(id));
   }
+  return response;
 };
 
 // Reducer:
