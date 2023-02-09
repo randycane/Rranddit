@@ -9,6 +9,7 @@ import PostCardComponent from "../PostCards/PostCard";
 import "./Home.css";
 import github from "./github.png";
 import linkedin from "./linkedin.png";
+import LoginFormModal from "../LoginModal";
 
 const HomeComponent = () => {
   const dispatch = useDispatch();
@@ -60,7 +61,7 @@ const HomeComponent = () => {
 
   return (
     <div className="pageContainer">
-      <LoginModalComponent
+      <LoginFormModal
         isOpen={loginFormModalIsOpen}
         modalToggle={setIsLoginFormModalIsOpen}
       />

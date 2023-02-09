@@ -109,6 +109,12 @@
   width: 310px;
 }
 
+.createSubrandditPost:hover{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  cursor: pointer;
+}
+
 .followedSubrandditContent {
   overflow-y: scroll;
   height: 250px;
@@ -170,4 +176,8 @@
   height: 50px;
   border-radius: 9999px;
   object-fit: cover;
+}
+
+.rowTwo{
+  margin-top: 50px;
 }

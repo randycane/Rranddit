@@ -155,9 +155,9 @@ a {
   align-items: center;
   padding: 2px;
   margin-right: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 45px;
-  width: 90px;
+  width: 98px;
   border: 1px solid slategrey;
 }
 .profile-div-dropdown:hover {

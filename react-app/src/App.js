@@ -12,7 +12,6 @@ import CreatingPostComponent from './components/CreatePosts/CreatePosts';
 import HomeComponent from './components/HomePage/Home';
 import CreatingSubrandditComponent from './components/CreateSubrand';
 import NavBarComponent from './components/NavBar/NavBar';
-//import LoginModalComponent from './components/LoginModal/Login';
 import SubrandPageComponent from './components/SubrandPage';
 import UpdateSubrandditComponent from './components/UpdateSubrand';
 import UpdatePostComponent from './components/UpdatePost';
@@ -20,6 +19,7 @@ import MyProfileComponent from './components/MyProfile/MyProfile';
 import PostDetailComponent from './components/PostDetails/PostDetails';
 import ErrorPageComponent from './components/ErrorPage/ErrorPage';
 import LoginFormModal from './components/LoginModal';
+import LoginModalComponent from './components/LoginModal/Login';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -41,7 +41,7 @@ function App() {
       <NavBarComponent isLoaded={loaded} />
       <Switch>
         <Route path='/login' exact={true}>
-          <LoginFormModal isOpen={true} modalToggle={() => {}}/>
+          <LoginModalComponent isOpen={true} modalToggle={() => {}}/>
         </Route>
         <Route path='/sign-up' exact={true}>
           <SignUpForm />

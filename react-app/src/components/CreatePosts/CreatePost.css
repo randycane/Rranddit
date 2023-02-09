@@ -68,8 +68,9 @@
 
   .createPostButtonDiv {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     margin-top: 15px;
     width: 95%;
     height: 30px;

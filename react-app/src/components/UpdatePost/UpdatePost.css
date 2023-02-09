@@ -50,22 +50,52 @@
     color: rgba(0, 0, 0, 0.565);
   }
 
-  .editPostFormButton {
-    display: flex;
+  .editPostButton {
+    font-size: 14px;
     justify-content: center;
-    margin-right: 10px;
+    border: 1px solid darkblue;
+    border-radius: 9999px;
+    width: 80px;
+    height: 30px;
+    color: #f1f5f7;
+    background-color: rgb(0, 121, 211);
+    margin-right: 5px;
   }
 
-  .editPostFormButton button {
-    color: white;
-    background-color: rgb(17, 138, 230);
-    border-style: none;
-    height: 30px;
-    border-radius: 30px;
-    width: 90px;
-    margin-top: 15px;
+  .editPostButton:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
   }
-  .editPostFormButton button:hover {
+
+  .deletePostButton {
+    font-size: 12.5px;
+    justify-content: center;
+    border: 1px solid darkblue;
+    border-radius: 9999px;
+    width: 80px;
+    height: 30px;
+    color: #f1f5f7;
+    background-color: rgb(228, 76, 11);
+  }
+
+  .deletePostButton:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+  }
+
+  .post-the-edit {
+    font-size: 14px;
+    justify-content: center;
+    border: 1px solid darkblue;
+    border-radius: 9999px;
+    width: 80px;
+    height: 30px;
+    color: #f1f5f7;
+    background-color: rgb(0, 121, 211);
+    margin-right: 5px;
+  }
+
+  .post-the-edit:hover {
     box-shadow: rgba(0, 0, 0, 0.11) 1.95px 1.95px 2.6px;;
     background-color: rgb(5, 83, 142);
     cursor: pointer;

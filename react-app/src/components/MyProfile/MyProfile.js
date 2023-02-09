@@ -81,7 +81,7 @@ const MyProfileComponent = () => {
           {sessionPosts.length || user ? (
             <div className="homePageDiv">
               <div className="rowOne">
-              <div className="written-by-you"> Your posts </div>
+              <div className="written-by-you"> Recent posts </div>
                 {postsLoaded ? (
                   sessionPosts.length ? (
                     sessionPosts.map((post) => {
@@ -134,7 +134,6 @@ const MyProfileComponent = () => {
                             className="createSubrandditPost"
                             onClick={createPostPage}
                           >
-                            {" "}
                             Create post
                           </div>
                         </div>

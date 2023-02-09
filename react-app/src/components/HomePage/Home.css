@@ -47,6 +47,7 @@
   height: 55px;
   border: 1px solid rgb(205, 205, 205);
   margin-bottom: 1.5rem;
+  padding: 2px;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -152,7 +153,7 @@
   display: flex;
   width: 310px;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 65px;
   margin-left: 20px;
   margin-right: 10px;
 }
@@ -176,6 +177,7 @@
   border: 1px solid navy;
   background-color: #f2f4f5;
   /* margin-top: 10px; */
+  margin-left: 2px;
   height: 150px;
   width: 310px;
 }
@@ -260,6 +262,7 @@
   border-radius: 9999px;
   width: 290px;
   height: 40px;
+  margin-left: 8px;
   color: #f2f4f5;
   background-color: rgb(0, 121, 211);
 }

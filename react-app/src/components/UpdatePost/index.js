@@ -110,8 +110,8 @@ const UpdatePostComponent = () => {
                   />
                 </label>
 
-                <div className="editPostFormButton">
-                  <button type="submit">Edit Post</button>
+                <div className="editting-posts">
+                  <button className="post-the-edit" type="submit">Edit Post</button>
                 </div>
               </div>
             </form>

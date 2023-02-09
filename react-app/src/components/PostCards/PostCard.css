@@ -31,7 +31,8 @@
     margin: 2px;
     border-radius: 10px;
     padding: 2px;
-    width: 80%;
+    width: 400px;
+    height: 350px;
 }
 
 .undercard:hover{
@@ -55,15 +56,15 @@
 .post-img{
     display: flex;
     flex-direction: column;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     margin: 4px;
 }
 
 .img-pic{
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 5px;
 }
