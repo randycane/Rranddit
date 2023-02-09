@@ -64,7 +64,7 @@ const MyProfileComponent = () => {
     if (!sessionUser) {
       setIsLoginFormModalIsOpen(true);
     } else {
-      let path = `/submit`;
+      let path = `/create-post`;
       history.push(path);
     }
   };
