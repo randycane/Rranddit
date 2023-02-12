@@ -23,8 +23,6 @@ const PostCardComponent = ({ post }) => {
     let path = `/user/${userId}`;
     history.push(path);
   };
-  //console.log("post number", post.id);
-  // console.log("post targeted", postId);
   return (
     <div className="post-top" key={post.id}>
       <div className="post-each">

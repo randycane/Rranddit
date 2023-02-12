@@ -12,7 +12,6 @@ import {
 import WriteACommentComponent from "../CreateComment/CreateComment";
 
 import "./PostDetails.css";
-//import LoginModalComponent from "../LoginModal/Login";
 import UpdateCommentComponent from "../UpdateComment/UpdateComment";
 
 const PostDetailComponent = () => {
