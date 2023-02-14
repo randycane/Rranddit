@@ -26,5 +26,26 @@
 * Subranddits
 * Posts
 * Comments
+* Profile and Following
 
+## Features coming soon:
+* Search 
+
+## Home page
+![Screen Shot 2023-02-13 at 5 34 49 PM](https://user-images.githubusercontent.com/92779080/218615378-bca74118-433c-4e5e-979f-b59a6e527898.png)
+
+## Login Page
+![Screen Shot 2023-02-13 at 5 35 41 PM](https://user-images.githubusercontent.com/92779080/218615514-3142685c-8409-4620-a6ed-5248c95f48a9.png)
+
+## Signup Page
+![Screen Shot 2023-02-13 at 5 36 21 PM](https://user-images.githubusercontent.com/92779080/218615591-7e189dc6-9d71-47b9-a58d-7d197235aef6.png)
+
+## A Subranddit details page
+![Screen Shot 2023-02-13 at 5 37 28 PM](https://user-images.githubusercontent.com/92779080/218615755-f7b0c6b3-1721-41bc-8520-54a00ca5e773.png)
+
+## Creating a post page
+![Screen Shot 2023-02-13 at 5 38 28 PM](https://user-images.githubusercontent.com/92779080/218615904-d4a61944-b067-4d1d-87c8-2c8c20157991.png)
+
+## Post details with comments example page
+![Screen Shot 2023-02-13 at 5 39 33 PM](https://user-images.githubusercontent.com/92779080/218616067-94793be3-bfa8-414d-970f-17ea64c817a1.png)
 
