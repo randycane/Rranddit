@@ -185,7 +185,7 @@
 .homepageSubrandditContent {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: scroll hidden;
   height: 410px;
 }
 

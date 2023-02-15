@@ -116,7 +116,7 @@
 }
 
 .followedSubrandditContent {
-  overflow-y: scroll;
+  overflow-y: scroll hidden;
   height: 250px;
 }
 
