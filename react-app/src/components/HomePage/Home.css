@@ -244,11 +244,8 @@
 .subrandditCreateDiv {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; */
   justify-content: center;
-  /* margin-top: 22em; */
-  /* height: 100px; */
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .createSubrandditButton {
