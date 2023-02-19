@@ -9,7 +9,7 @@ function WriteACommentComponent({ post, onSuccess= null }) {
   const [text, setText] = useState("");
   const [errors, setErrors] = useState([]);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const sessionUser = useSelector((state) => state.session.user);
+  const sessionUser = useSelector((state) => state?.session?.user);
 
   const handleSubmit = (e) => {
     e.preventDefault();

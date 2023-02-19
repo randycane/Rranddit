@@ -10,7 +10,6 @@ import {
 import { ReadPostBySubrandditIdThunk } from "../../store/post";
 import PostCardComponent from "../PostCards/PostCard.js";
 import UpdateSubrandditModal from "../UpdateSubrand/UpdateSubModal";
-import LoginModalComponent from "../LoginModal";
 import "./SubrandPage.css";
 
 const SubrandPageComponent = () => {
@@ -188,7 +187,6 @@ const SubrandPageComponent = () => {
                         return (
                           <PostCardComponent
                             post={post}
-
                           />
                         );
                       })

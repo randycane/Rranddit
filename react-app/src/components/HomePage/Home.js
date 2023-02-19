@@ -4,12 +4,12 @@ import { useHistory } from "react-router-dom";
 
 import { getAllSubrandditsThunk } from "../../store/subranddit";
 import { ReadPostsThunk } from "../../store/post";
-import LoginModalComponent from "../LoginModal/Login";
+//import LoginModalComponent from "../LoginModal/Login";
 import PostCardComponent from "../PostCards/PostCard";
 import "./Home.css";
 import github from "./github.png";
 import linkedin from "./linkedin.png";
-import LoginFormModal from "../LoginModal";
+//import LoginFormModal from "../LoginModal";
 
 const HomeComponent = () => {
   const dispatch = useDispatch();

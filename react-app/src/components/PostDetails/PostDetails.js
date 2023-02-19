@@ -85,10 +85,10 @@ const PostDetailComponent = () => {
     dispatch(deleteCommentThunk(comment.id));
   };
 
-  const homePage = () => {
-    let path = `/`;
-    history.push(path);
-  };
+  // const homePage = () => {
+  //   let path = `/`;
+  //   history.push(path);
+  // };
 
   return (
     // <h1> hello</h1>
