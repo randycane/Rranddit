@@ -1,4 +1,4 @@
-# Randdit: A reddit inspired application for weebs and everyone is inclusive! You can start your own subranddits which are communities for any anime/manga, as well as make posts pertaining to that community. Each post can be commented upon!
+# Randdit: A reddit inspired application for anime and manga enthusiasts! You can start your own subranddits which are inclusive communities for any anime/manga, as well as make posts pertaining to that community. Each post can be commented upon!
 
 # Built With
 #### Frameworks, Platforms, & Libraries:
