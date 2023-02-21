@@ -64,6 +64,7 @@ const HomeComponent = () => {
     <div className="pageContainer">
       <div className="homePageDiv">
         <div className="rowOne">
+          {sessionUser && (
           <div className="createPostDiv">
             <div className="createInputContainer">
               <input
@@ -74,6 +75,7 @@ const HomeComponent = () => {
               />
             </div>
           </div>
+          )}
           {postsLoaded ? (
             posts.length ? (
               posts.map((post) => {
