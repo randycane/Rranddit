@@ -154,7 +154,7 @@ const MyProfileComponent = () => {
                 {userOwnsProfile && (
                   <div className="followed-subr">
                     <div className="about-followed">
-                      <span>Followed Subranddits</span>
+                      <div className="profile-follow">Followed Subranddits</div>
                     </div>
                     <div className="followedSubrandditContent">
                       {userSubrandditsLoaded &&
