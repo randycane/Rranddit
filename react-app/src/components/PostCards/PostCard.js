@@ -26,6 +26,7 @@ const PostCardComponent = ({ post }) => {
   return (
     <div className="post-top" key={post.id}>
       <div className="post-each">
+        <div className="author-sandwich">
         <div
           className="postSubrandditName"
           onClick={(e) => subrandditPage(post.subranddit_id)}
@@ -37,6 +38,8 @@ const PostCardComponent = ({ post }) => {
           onClick={(e) => usersProfilePage(post.user_id)}
         >
           Posted by u/{post.username}
+        </div>
+
         </div>
         <div className="undercard" onClick={(e) => postDetailPage(post.id)}>
           <div className="postTitle">{post.post_title}</div>
