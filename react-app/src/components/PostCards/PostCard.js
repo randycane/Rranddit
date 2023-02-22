@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, Link, NavLink } from "react-router-dom";
-//import PostDetailComponent from "../PostDetails/PostDetails";
 import "./PostCard.css";
 
 const PostCardComponent = ({ post }) => {

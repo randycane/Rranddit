@@ -48,7 +48,7 @@
 }
 
 .comment-content{
-  border: 1px solid grey;
+  border: 1px solid rgb(145, 141, 141);
   margin: 2px;
   padding: 2px;
   border-radius: 5px;
@@ -62,7 +62,7 @@ justify-content: center;
 align-items: center;
 }
 .commented-by{
-  color: rgb(52, 52, 213);
+  color: rgb(55, 55, 225);
   font-family: verdana, sans-serif;
   font-size: 13px;
 }

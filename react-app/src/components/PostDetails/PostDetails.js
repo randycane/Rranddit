@@ -18,8 +18,6 @@ const PostDetailComponent = () => {
   let { postId } = useParams();
   postId = Number(postId);
 
-  // console.log("wjhere is the page", postId)
-
   let subrandditId;
   const dispatch = useDispatch();
   const history = useHistory();
