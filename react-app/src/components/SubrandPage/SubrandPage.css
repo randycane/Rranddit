@@ -24,7 +24,7 @@
 
 .joinToggleSubrandditButton:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  background-color: royalblue;
+  background-color: rgb(53, 96, 227);
   cursor: pointer;
 }
 

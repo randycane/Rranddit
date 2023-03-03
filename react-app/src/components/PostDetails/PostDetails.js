@@ -31,8 +31,6 @@ const PostDetailComponent = () => {
     Object.values(state?.comments)
   );
 
-  //console.log("show me comments", sessionComments);
-
   if (sessionPost && sessionPost.length) {
     subrandditId = sessionPost.subranddit_id;
   }
