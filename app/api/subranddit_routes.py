@@ -134,3 +134,10 @@ def get_users_subranddits():
     subranddits = [subscription.subranddit.to_dict() for subscription in subscriptions]
 
     return jsonify(subranddits)
+
+# for searching:
+@subranddit_routes.route('/query')
+def use_search():
+  searchParams = request.args.get('search')
+  name_results = Subranddit.query.filter(Subranddit.title.ilike(f'%{searchParams}%')).all()
+  return jsonify(response)
