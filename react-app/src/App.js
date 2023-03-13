@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-//import LoginForm from './components/auth/LoginForm';
 import SignUpForm from './components/auth/SignUpForm';
-//import NavBar from './components/NavBar/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
-//import User from './components/User';
 import { authenticate } from './store/session';
 import CreatingPostComponent from './components/CreatePosts/CreatePosts';
 import HomeComponent from './components/HomePage/Home';
@@ -18,8 +15,6 @@ import UpdatePostComponent from './components/UpdatePost';
 import MyProfileComponent from './components/MyProfile/MyProfile';
 import PostDetailComponent from './components/PostDetails/PostDetails';
 import ErrorPageComponent from './components/ErrorPage/ErrorPage';
-//import LoginFormModal from './components/LoginModal';
-//import LoginModalComponent from './components/LoginModal/Login';
 import LoginNewPage from './components/LoginModal/Login';
 import SearchedSubsComponent from './components/SearchedSubs';
 
