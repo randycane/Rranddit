@@ -21,6 +21,7 @@ import ErrorPageComponent from './components/ErrorPage/ErrorPage';
 //import LoginFormModal from './components/LoginModal';
 //import LoginModalComponent from './components/LoginModal/Login';
 import LoginNewPage from './components/LoginModal/Login';
+import SearchedSubsComponent from './components/SearchedSubs';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -55,6 +56,9 @@ function App() {
         </Route>
         <Route path="/r/:subrandditId" exact={true}>
           <SubrandPageComponent />
+        </Route>
+        <Route path="/r/search">
+          <SearchedSubsComponent />
         </Route>
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
