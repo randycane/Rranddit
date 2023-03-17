@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
-
-
 import PostCardComponent from "../PostCards/PostCard";
 import { deletePostThunk, getMyPostsThunk } from "../../store/post";
 import { getMyOwnSubsThunk } from "../../store/subranddit";

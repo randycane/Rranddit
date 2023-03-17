@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import LogoutButton from "../auth/LogoutButton";
-// import LoginFormModal from "../LoginModal";
-// import SignUpForm from "../auth/SignUpForm";
-// import SignupFormModal from "../auth/SignUpModal";
 import "./NavBar.css";
 import ProfileButtonComponent from "./Profile";
-// import LoginModalComponent from "../LoginModal/Login";
-// import LoginNewPage from "../LoginModal/Login";
 
 const NavBarComponent = ({ isLoaded }) => {
   const history = useHistory();
