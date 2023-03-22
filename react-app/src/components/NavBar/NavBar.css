@@ -11,7 +11,7 @@ a {
 .navi-container {
   position: fixed;
   top: 0px;
-  background-color: rgb(245, 235, 235);
+  background-color: rgb(249, 246, 246);
   width: 100%;
 }
 
@@ -23,7 +23,8 @@ a {
   font-size: 16px;
   font-weight: 500px;
   height: 60px;
-  border-bottom: 1px solid rgb(157, 139, 139);
+  background-color: rgb(239, 249, 250);
+  border-bottom: 1px solid rgb(128, 114, 114);
 }
 
 .right-navi {
@@ -85,9 +86,9 @@ a {
   font-family: verdana, sans-serif;
 }
 
-.menu-profile:hover{
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.33) 1.95px 1.95px 2.4px;
+.menu-profile:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.33) 1.95px 1.95px 2.4px;
 }
 
 .menu-shown {
@@ -116,7 +117,7 @@ a {
   font-weight: 700;
 }
 
-.comming{
+.comming {
   display: flex;
   border: none;
   background-color: white;
@@ -175,7 +176,6 @@ a {
   border: 1px solid rgb(249, 242, 213);
 }
 
-
 .profile-below {
   display: flex;
   flex-direction: row;
@@ -204,41 +204,41 @@ a {
   color: darkblue;
 }
 
-.logging-in-right{
+.logging-in-right {
   font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    width: 120px;
-    height: 23px;
-    border-radius: 9999px;
-    border-style:none ;
-    color: white;
-    margin-left: 10px;
-    margin-right: 12px;
-    background-color: royalblue;
+  font-size: 14px;
+  font-weight: 500;
+  width: 120px;
+  height: 23px;
+  border-radius: 9999px;
+  border-style: none;
+  color: white;
+  margin-left: 10px;
+  margin-right: 12px;
+  background-color: royalblue;
 }
 
-.signing-up-right{
+.signing-up-right {
   font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    width: 120px;
-    height: 23px;
-    border-radius: 9999px;
-    border: 1px solid royalblue;
-    color: darkblue;
-    margin-left: 10px;
-    margin-right: 12px;
-    background-color: white;
+  font-size: 14px;
+  font-weight: 500;
+  width: 120px;
+  height: 23px;
+  border-radius: 9999px;
+  border: 1px solid royalblue;
+  color: darkblue;
+  margin-left: 10px;
+  margin-right: 12px;
+  background-color: white;
 }
 
-.logging-in-right:hover{
-  box-shadow: rgba(31, 30, 30, 0.15) 1.95px 1.95px 2.4px;;
-    background-color: rgb(12, 79, 130);
+.logging-in-right:hover {
+  box-shadow: rgba(31, 30, 30, 0.15) 1.95px 1.95px 2.4px;
+  background-color: rgb(12, 79, 130);
   cursor: pointer;
 }
 
-.signing-up-right:hover{
+.signing-up-right:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.4px;
   cursor: pointer;
 }
