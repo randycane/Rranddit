@@ -23,8 +23,6 @@
   }
 
   .editSubrandditFormTitle {
-    /* border: 1px solid red; */
-    /* margin: auto; */
     margin-left: 25px;
   }
 
@@ -33,7 +31,6 @@
   }
 
   .innerEditSubrandditFormContainer {
-    /* border: 1px solid red; */
     margin: auto;
     width: 90%;
     height: 90%;
@@ -50,7 +47,6 @@
   }
 
   .editFormInputContainer {
-    /* border: 1px solid red; */
     display: flex;
     margin: auto;
     width: 85%;
@@ -75,7 +71,7 @@
     width: 120px;
     border-radius: 50px;
     border-style:none ;
-    background-color: rgb(1,121,211);
+    background-color: rgb(8, 108, 184);
     color: white;
   }
 
@@ -89,7 +85,6 @@
   .editIconBackground{
     border-radius: 50%;
     position: absolute;
-    /* border: 1px solid red; */
     height: 30px;
     width: 35px;
     background-color:white ;
@@ -110,7 +105,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 1px solid red; */
     border: 1px solid rgb(209, 199, 199);
     width: 80%;
     height: 230px;
@@ -125,7 +119,6 @@
   }
 
   .edit-preview-notes {
-    /* border: 1px solid red; */
     height: 25px;
     width: 90%;
     margin: auto;
