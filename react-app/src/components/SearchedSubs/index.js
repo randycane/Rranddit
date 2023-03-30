@@ -27,7 +27,6 @@ function SearchedSubsComponent() {
     return (
         <>
             {subranddits.length ? <h1 className="title-search">Search Results For: {searchInput}</h1> : <h1 className="title-search">No Results</h1>}
-            {console.log("------------------------")}
             <div className="whole-subranddit">
                 {subranddits.map((subranddit) => {
                     return <div className="searched-subs">
