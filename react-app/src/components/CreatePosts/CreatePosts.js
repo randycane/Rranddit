@@ -12,7 +12,6 @@ const CreatingPostComponent = () => {
   const history = useHistory();
   const subranddits = useSelector((state) => Object.values(state?.subranddits));
 
-  //const UserIsLoggedIn = useSelector((state) => state.session.user);
   const urlParams = new URLSearchParams(window.location.search);
   let subrandditId = Number(urlParams.get("subranddit_id"));
   subrandditId = subrandditId > 0 ? subrandditId : 1;

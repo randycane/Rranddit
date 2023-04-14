@@ -26,7 +26,7 @@ const PostDetailComponent = () => {
     Object.values(state?.subranddits)
   );
   const sessionPost = useSelector((state) => Object.values(state?.posts));
-  const sessionUser = useSelector((state) => state.session.user);
+  const sessionUser = useSelector((state) => state?.session?.user);
   const sessionComments = useSelector((state) =>
     Object.values(state?.comments)
   );
@@ -62,7 +62,6 @@ const PostDetailComponent = () => {
     history.push(path);
   };
 
-
   const createPostPage = () => {
     let path = `/submit?subranddit_id=${subrandditId}`;
     history.push(path);
@@ -81,13 +80,7 @@ const PostDetailComponent = () => {
     dispatch(deleteCommentThunk(comment.id));
   };
 
-  // const homePage = () => {
-  //   let path = `/`;
-  //   history.push(path);
-  // };
-
   return (
-    // <h1> hello</h1>
     <div className="pageContainer">
       <div className="homePageDiv">
         <div className="rowOne">
@@ -116,9 +109,7 @@ const PostDetailComponent = () => {
                         </button>
                       </div>
                     )}
-                    <PostCardComponent
-                      post={post}
-                    />
+                    <PostCardComponent post={post} />
                     {commentsLoaded && (
                       <>
                         <div>{sessionComments.length} comments</div>
@@ -127,17 +118,18 @@ const PostDetailComponent = () => {
                           return (
                             <>
                               <div className="comment-div">
-                                <div className="commenter-div">
-
-                                </div>
+                                <div className="commenter-div"></div>
                                 <div className="comment-content">
                                   <div className="commentHeader">
-                                    <div className="commented-by"> commented by u/{comment.username}</div>
+                                    <div className="commented-by">
+                                      {" "}
+                                      commented by u/{comment.username}
+                                    </div>
                                     <div className="comment-buttons">
                                       {sessionUser &&
                                         sessionUser.id === comment.user_id && (
-                                        <div>
-                                          <button
+                                          <div>
+                                            <button
                                               className="editCommentButton"
                                               onClick={() => {
                                                 setOpenCommentEditFormId(
@@ -200,7 +192,8 @@ const PostDetailComponent = () => {
                 <>
                   <div className="subr-info">
                     <div className="postPage">
-                      <img className="banner-fit"
+                      <img
+                        className="banner-fit"
                         src={subranddit.banner_img}
                         alt="bannerImage"
                         onError={(e) => {

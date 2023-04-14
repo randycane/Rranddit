@@ -27,7 +27,7 @@ const SubrandPageComponent = () => {
     return posts;
   });
 
-  const sessionUser = useSelector((state) => state.session.user);
+  const sessionUser = useSelector((state) => state?.session?.user);
 
   const [updateSubModalIsOpen, setUpdateSubModalIsOpen] = useState(false);
   const [subrandditLoaded, setSubrandditLoaded] = useState(false);
@@ -128,10 +128,8 @@ const SubrandPageComponent = () => {
                                     Edit Sub
                                   </button>
                                   <UpdateSubrandditModal
-                                  isOpen={updateSubModalIsOpen}
-                                  modalToggle={
-                                    setUpdateSubModalIsOpen
-                                  }
+                                    isOpen={updateSubModalIsOpen}
+                                    modalToggle={setUpdateSubModalIsOpen}
                                   />
                                   <button
                                     className="delete-button"
@@ -184,11 +182,7 @@ const SubrandPageComponent = () => {
                   {postsLoaded &&
                     (posts.length ? (
                       posts.map((post) => {
-                        return (
-                          <PostCardComponent
-                            post={post}
-                          />
-                        );
+                        return <PostCardComponent post={post} />;
                       })
                     ) : (
                       <div>No posts yet</div>
