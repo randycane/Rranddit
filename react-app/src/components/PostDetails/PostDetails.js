@@ -83,7 +83,7 @@ const PostDetailComponent = () => {
   return (
     <div className="pageContainer">
       <div className="homePageDiv">
-        <div className="rowOne">
+        <div className="columnPost">
           {postLoaded ? (
             sessionPost.length ? (
               sessionPost.map((post) => {
