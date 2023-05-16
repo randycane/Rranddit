@@ -32,7 +32,8 @@
 * Search 
 
 ## Home page
-![Screen Shot 2023-02-13 at 5 34 49 PM](https://user-images.githubusercontent.com/92779080/218615378-bca74118-433c-4e5e-979f-b59a6e527898.png)
+<img width="1668" alt="Screen Shot 2023-05-16 at 3 37 38 PM" src="https://github.com/randycane/Rranddit/assets/92779080/7ae8857b-f415-42e0-a28f-34615d912a75">
+
 
 ## Login Page
 ![Screen Shot 2023-02-13 at 5 35 41 PM](https://user-images.githubusercontent.com/92779080/218615514-3142685c-8409-4620-a6ed-5248c95f48a9.png)
